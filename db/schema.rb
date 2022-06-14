@@ -10,10 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_13_140635) do
+ActiveRecord::Schema.define(version: 2022_06_14_095958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cigarettes", force: :cascade do |t|
+    t.string "brand"
+    t.float "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "consumptions", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "cigarette_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cigarette_id"], name: "index_consumptions_on_cigarette_id"
+    t.index ["user_id"], name: "index_consumptions_on_user_id"
+  end
+
+  create_table "motivations", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.string "category_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "objectives", force: :cascade do |t|
+    t.string "title"
+    t.integer "amount"
+    t.date "reaching_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pots", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "objective_id", null: false
+    t.integer "amount"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["objective_id"], name: "index_pots_on_objective_id"
+    t.index ["user_id"], name: "index_pots_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +66,18 @@ ActiveRecord::Schema.define(version: 2022_06_13_140635) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "age"
+    t.string "gender"
+    t.string "iban"
+    t.string "bank_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "consumptions", "cigarettes"
+  add_foreign_key "consumptions", "users"
+  add_foreign_key "pots", "objectives"
+  add_foreign_key "pots", "users"
 end
