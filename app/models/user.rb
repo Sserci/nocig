@@ -9,13 +9,11 @@ class User < ApplicationRecord
   validates :gender, inclusion: { in: %w(Femme Homme Autre)}
 
   # objectives validate
-  validates :title, :amount, :reaching_date, presence: true
-  validates :amount, numericality: { only_integer: true, greater_than: 0 }
-  validates :title, length: { maximum: 20 }
+  validates :objective_amount, numericality: { only_integer: true, greater_than: 0 }
+  validates :objective_title, length: { maximum: 20 }
 
   # pots validates
-  validates :amount, presence: true
-  validates :amount, numericality: { only_integer: true, greater_than: 0 }
+  validates :pot, numericality: { only_integer: true, greater_than: 0 }
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
