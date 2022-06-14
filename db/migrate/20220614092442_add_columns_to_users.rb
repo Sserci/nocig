@@ -6,9 +6,11 @@ class AddColumnsToUsers < ActiveRecord::Migration[6.1]
     add_column :users, :gender, :string
     add_column :users, :iban, :string
     add_column :users, :bank_name, :string
+=begin
     add_column :users, :pot, :integer
     add_column :users, :objective_title, :string
     add_column :users, :objective_amount, :integer
     add_column :users, :objective_category, :string
+=end
   end
 end
