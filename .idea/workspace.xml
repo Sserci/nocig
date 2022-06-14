@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a34f23f-1699-4a04-8ca4-0ff4e5dfdd20" name="Changes" comment="fix bug regex and correct validatable">
+      <change afterPath="$PROJECT_DIR$/app/controllers/dashboards_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/dashboards_controller_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20220614092442_add_columns_to_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20220614092442_add_columns_to_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,7 +307,7 @@
       <option name="presentableId" value="Default" />
       <updated>1655198593894</updated>
       <workItem from="1655198595595" duration="919000" />
-      <workItem from="1655200474470" duration="5634000" />
+      <workItem from="1655200474470" duration="9888000" />
     </task>
     <task id="LOCAL-00001" summary="Add config file from rubymine">
       <created>1655198784260</created>
