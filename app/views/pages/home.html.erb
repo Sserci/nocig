@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="background-home">
+  <div class="home-logo">
+    <%= image_tag("Logo.png", style: {height: ": 60px"})%>
+  </div>
+  <div class="slogan-container">
+    <p class="slogan">Vous n’allez pas croire tout ce que vous allez économiser. </p>
+  </div>
+  <%= link_to "ME CONNECTER 👋", login_path, class: "btn connect-button" %> <br>
+  <%= link_to "Découvrir l'app", simulation_path, class: "home-link" %>
+</div>
+

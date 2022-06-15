@@ -1,0 +1,16 @@
+<%= simple_form_for(@simulation) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :quantity,
+                required: true,
+                autofocus: true %>
+    <%= f.input :cigarette,
+                required: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Suivant" %>
+  </div>
+<% end %>
+
