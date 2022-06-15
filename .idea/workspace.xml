@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a34f23f-1699-4a04-8ca4-0ff4e5dfdd20" name="Changes" comment="add routing">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/background-home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/background-smoke 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/components/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/components/_home.scss" afterDir="false" />
+    <list default="true" id="0a34f23f-1699-4a04-8ca4-0ff4e5dfdd20" name="Changes" comment="modification of validates user &amp; begin home page">
+      <change afterPath="$PROJECT_DIR$/app/assets/images/Logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/components/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/components/_home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/config/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/config/_colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/config/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/config/_fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages/_index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -350,7 +348,7 @@
       <workItem from="1655198595595" duration="919000" />
       <workItem from="1655200474470" duration="10791000" />
       <workItem from="1655223157649" duration="808000" />
-      <workItem from="1655280504478" duration="9169000" />
+      <workItem from="1655280504478" duration="12434000" />
     </task>
     <task id="LOCAL-00001" summary="Add config file from rubymine">
       <created>1655198784260</created>
@@ -373,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655222079686</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="modification of validates user &amp; begin home page">
+      <created>1655297072272</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655297072272</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,6 +400,7 @@
     <MESSAGE value="Add config file from rubymine" />
     <MESSAGE value="fix bug regex and correct validatable" />
     <MESSAGE value="add routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="add routing" />
+    <MESSAGE value="modification of validates user &amp; begin home page" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification of validates user &amp; begin home page" />
   </component>
 </project>
