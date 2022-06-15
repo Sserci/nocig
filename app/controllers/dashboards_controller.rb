@@ -5,4 +5,7 @@ class DashboardsController < ApplicationController
 
   def objective_amount
   end
+  
+  def dashboard
+  end
 end
