@@ -17,10 +17,4 @@ Rails.application.routes.draw do
   get '/dashboard/motivation', to: 'dashboards#motivation', as: 'dashboard_motivation'
   get '/dashboard/consumption', to: 'dashboards#new_consumption', as: 'dashboard_new_consumption'
   post '/dashboard/consumption', to: 'dashboards#create_consumption', as: 'dashboard_create_consumption'
-
-
-
-
-
-
 end
