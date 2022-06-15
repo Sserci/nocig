@@ -1,0 +1,22 @@
+.btn-bank-info {
+  color: $custom-blue-black;
+  width: 300px;
+  height: 55px;
+  border-radius: 8px;
+  background: #DCE5E5;
+  transition: background 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.green-btn {
+  color: white;
+  width: 300px;
+  height: 35px;
+  border-radius: 8px;
+  background: $custom-green-button;
+  transition: background 0.3s ease;
+}
