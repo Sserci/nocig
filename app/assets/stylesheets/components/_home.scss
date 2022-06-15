@@ -1,0 +1,43 @@
+.background-home {
+  background-image: asset_url("background-home");
+  //background-color: #E7C9E0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.slogan {
+  color: white;
+  font-size: 32px;
+  width: 290px;
+  height: 146px;
+  margin: 30% auto 210px;
+}
+.slogan-container {
+  text-align: start;
+}
+.connect-button {
+  margin: 0 auto 54px;
+  background-color: $custom-green-button;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 55px;
+  font-weight: bold;
+  font-size: 24px;
+}
+.home-link {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+.home-logo {
+  margin-top: 10px;
+  text-align: end;
+  height: 60px;
+}
