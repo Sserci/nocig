@@ -5,15 +5,17 @@
       <%= f.input :quantity,
                   required: true,
                   label: false,
-                  placeholder: "Nombre de paquets fumés par semaine"   %>
+                  placeholder: "Nombre de paquets fumés par semaine",
+                  input_html: {class: "form-control-simulation"}%>
       <%= f.input :cigarette,
                   required: true,
                   label: false,
-                  placeholder: "Marque de vos cigarettes "%>
+                  placeholder: "Marque de vos cigarettes",
+                  input_html: {class: "form-control-simulation"} %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Suivant" %>
+      <%= f.button :submit, "Suivant", class: "green-btn" %>
     </div>
   <% end %>
 </div>
