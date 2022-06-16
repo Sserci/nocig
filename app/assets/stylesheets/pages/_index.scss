@@ -1,2 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
+
+body {
+  font-family: $lato;
+  background-color: white;
+}
+h1 {
+  color: $custom-blue-black;
+}

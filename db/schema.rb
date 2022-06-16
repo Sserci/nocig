@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2022_06_14_095958) do
     t.integer "quantity"
     t.bigint "cigarette_id", null: false
     t.bigint "user_id", null: false
-    t.date "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cigarette_id"], name: "index_consumptions_on_cigarette_id"
@@ -39,6 +38,24 @@ ActiveRecord::Schema.define(version: 2022_06_14_095958) do
     t.string "category_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "objectives", force: :cascade do |t|
+    t.string "title"
+    t.integer "amount"
+    t.date "reaching_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pots", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "objective_id", null: false
+    t.integer "amount"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["objective_id"], name: "index_pots_on_objective_id"
+    t.index ["user_id"], name: "index_pots_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,14 +72,12 @@ ActiveRecord::Schema.define(version: 2022_06_14_095958) do
     t.string "gender"
     t.string "iban"
     t.string "bank_name"
-    t.integer "pot"
-    t.string "objective_title"
-    t.integer "objective_amount"
-    t.string "objective_category"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "consumptions", "cigarettes"
   add_foreign_key "consumptions", "users"
+  add_foreign_key "pots", "objectives"
+  add_foreign_key "pots", "users"
 end
