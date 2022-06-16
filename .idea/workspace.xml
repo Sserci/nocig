@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a34f23f-1699-4a04-8ca4-0ff4e5dfdd20" name="Changes" comment="fix background">
+      <change afterPath="$PROJECT_DIR$/app/assets/images/thailande.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/vespa.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages/_result.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/consumptions_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/pages/result.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/consumptions_controller_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/components/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/components/_buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/components/_input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/components/_input.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages/simulation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages/simulation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_consommation_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_consommation_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="SCSS File" />
         <option value="ERB File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>

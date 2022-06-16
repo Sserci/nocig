@@ -5,7 +5,21 @@ class PagesController < ApplicationController
   end
 
   def simulation
-    @cigarettes = Cigarette.all
     @simulation = Consumption.new
+  end
+  def result
+    @simulation = Consumption.find(params[:result])
+    @superiorTo1000 = [{
+                       background: "assets/thailande",
+                       title: "Voyage en Thailande"
+                     }, {
+                          background: "assets/vespa",
+                          title: "Voyage en Thailande"
+                       }, {
+                            background: "assets/thailande",
+                            title: "Voyage en Thailande"
+                       }]
+
+    @background = "assets/thailande"
   end
 end
