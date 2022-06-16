@@ -5,7 +5,8 @@ class DashboardsController < ApplicationController
 
   def objective_amount
   end
-  
+
   def dashboard
+    @time = Time.new
   end
 end

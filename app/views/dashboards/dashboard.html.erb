@@ -1,8 +1,11 @@
 <div class="header-dashboard">
-  <h2> Philippine</h2>
-  <p id="Avatar"> Avatar</p>
-  <p>15/06/2022</p>
-  <p><strong>Bravo !</strong> plus de "39" jours avant votre xxxx</p>
+  <div class="header-dashboard-info">
+    <h2> <%= current_user.first_name %></h2>
+    <span class="iconify" data-icon="carbon:user-avatar"></span>
+    <p><%= @time.strftime("%d of %B, %Y") %></p>
+    <%# time.strftime("%d/%m/%Y") %>
+    <p><strong>Bravo !</strong> plus de "39" jours avant votre xxxx</p>
+  </div>
 </div>
 
 <div class="card-recap">
@@ -12,14 +15,16 @@
   <div class="pot-growth">
 
     <div class="actual">
-      <p id="actual-pot">670€</p>
+      <p id="actual-pot"><%= current_user.pot %>€</p>
       <p>dans ma cagnotte</p>
     </div>
 
-    <p>bar d'avancement</p>
+    <div class="progression">
+      <progress id="progress-bar" value="30" max="100">30 %</progress>
+    </div>
 
     <div class="final">
-      <p id="final-pot">1500€</p>
+      <p id="final-pot"><%= current_user.objective_amount %>€</p>
       <p>montant final</p>
     </div>
   </div>
@@ -35,14 +40,14 @@
 
   <div class="card-dashboard">
     <div class="icon-bg">
-     <span class="iconify" data-icon="ant-design:heart-filled"></span>
+     <span class="iconify" data-icon="bi:heart"></span>
     </div>
     <p>Suivi santé</p>
   </div>
 
   <div class="card-dashboard">
     <div class="icon-bg">
-      <span class="iconify" data-icon="twemoji:flexed-biceps"></span>
+      <span class="iconify" id="muscle" data-icon="twemoji:flexed-biceps"></span>
     </div>
     <p>Motivation</p>
   </div>
