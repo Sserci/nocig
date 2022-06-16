@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a34f23f-1699-4a04-8ca4-0ff4e5dfdd20" name="Changes" comment="fix background">
+    <list default="true" id="0a34f23f-1699-4a04-8ca4-0ff4e5dfdd20" name="Changes" comment="add .idea to gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages/simulation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages/simulation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/_consommation_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_consommation_form.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655308619911</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add .idea to gitignore">
+      <created>1655371161264</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655371161264</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,6 +414,7 @@
     <MESSAGE value="add routing" />
     <MESSAGE value="modification of validates user &amp; begin home page" />
     <MESSAGE value="fix background" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix background" />
+    <MESSAGE value="add .idea to gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add .idea to gitignore" />
   </component>
 </project>

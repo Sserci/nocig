@@ -1,16 +1,20 @@
-<%= simple_form_for(@simulation) do |f| %>
-  <%= f.error_notification %>
+<div class="container-simulation-form">
+  <%= simple_form_for(@simulation) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :quantity,
+                  required: true,
+                  label: false,
+                  placeholder: "Nombre de paquets fumés par semaine"   %>
+      <%= f.input :cigarette,
+                  required: true,
+                  label: false,
+                  placeholder: "Marque de vos cigarettes "%>
+    </div>
 
-  <div class="form-inputs">
-    <%= f.input :quantity,
-                required: true,
-                autofocus: true %>
-    <%= f.input :cigarette,
-                required: true %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Suivant" %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit, "Suivant" %>
+    </div>
+  <% end %>
+</div>
 
