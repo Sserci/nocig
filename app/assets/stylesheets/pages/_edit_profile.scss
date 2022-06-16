@@ -1,7 +1,30 @@
 .profile-info {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .profile-redirect-info {
   text-align: center;
+}
+
+.password-update {
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.user-name {
+  color: $custom-blue-black;
+  font-size: 18px;
+}
+
+.profile-redirect-info-color {
+  color: $custom-blue-black;
+  text-decoration: none;
+}
+
+.back-arrow .iconify{
+  height: 30px;
+  width: 50px;
+  color: $custom-blue-black;
+  margin-top: 20px;
 }
