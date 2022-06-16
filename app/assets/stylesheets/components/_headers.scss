@@ -1,14 +1,20 @@
 
 .header-dashboard{
-  padding-top: 37px;
-  padding-left: 28px;
   background-color: rgba(89, 193, 190, 0.250);
+  padding-top: 1%;
+}
+.header-dashboard-info{
+  margin: 30px;
   h2 {
     font-size: 24px;
     color: #06C4BE;
   }
   p {
     font-size: 15px;
+  }
+  .iconify {
+    font-size: 95px;
+    margin-left: 120px;
   }
 }
 .header-pink {

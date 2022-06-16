@@ -1,7 +1,7 @@
 // Card principal
 
 .card-recap{
-  margin: 60px;
+  margin: 40px;
   box-shadow: 2px 2px 2px lightgray;
   border: lightgray 1px solid;
   text-align: center;
@@ -9,26 +9,27 @@
   p{
     font-size: 10px;
     color: #59C1BD;
+    padding-left: 10px;
   }
   h2{
     padding-top: 25px;
     color: #00586B;
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
 .pot-growth {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 #days-left {
-  font-size: 15px;
+  font-size: 18px;
   color: #59C1BD;
 }
 
 #actual-pot {
-  font-size: 15px;
+  font-size: 20px;
   color: #59C1BD;
   margin-bottom: -4px;
 }
@@ -38,16 +39,17 @@
 }
 
 #final-pot {
-  font-size: 15px;
+  font-size: 20px;
   color: #00586B;
   margin-bottom: -4px;
+  padding-right: 10px;
 }
 
 // Cards features
 
 .cards{
     display: grid;
-    margin: 63px;
+    margin: 36px 63px 63px 63px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 24px 24px;
@@ -61,7 +63,7 @@
   width: 120px;
   height: 130px;
   p{
-    padding-top: 85px;
+    padding: 85px 10px 10px 10px;
     text-align: center;
     font-size: 13px;
   }
@@ -80,6 +82,5 @@
     top: 10px;
     left: 17px;
     font-size: 40px;
-    stroke: black 1px;
   }
 }
