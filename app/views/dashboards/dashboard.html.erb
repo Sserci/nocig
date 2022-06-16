@@ -2,8 +2,9 @@
   <div class="header-dashboard-info">
     <h2> <%= current_user.first_name %></h2>
     <span class="iconify" data-icon="carbon:user-avatar"></span>
-    <p><%= @time.strftime("%d of %B, %Y") %></p>
-    <%# time.strftime("%d/%m/%Y") %>
+    <p><%=@time.strftime("%d/%m/%Y") %></p>
+
+    <%# <%= @time.strftime("%d of %B, %Y") %>
     <p><strong>Bravo !</strong> plus de "39" jours avant votre xxxx</p>
   </div>
 </div>
@@ -35,27 +36,27 @@
     <div class="icon-bg">
       <span class="iconify" data-icon="arcticons:money-manager"></span>
     </div>
-    <p>Ma cagnotte</p>
+    <p> <%= link_to "Ma cagnotte", dashboard_pot_path, class: "text-decoration-none"%></p>
   </div>
 
   <div class="card-dashboard">
     <div class="icon-bg">
      <span class="iconify" data-icon="bi:heart"></span>
     </div>
-    <p>Suivi santé</p>
+    <p><%= link_to "Suivi santé", dashboard_health_path, class: "text-decoration-none"%></p>
   </div>
 
   <div class="card-dashboard">
     <div class="icon-bg">
       <span class="iconify" id="muscle" data-icon="twemoji:flexed-biceps"></span>
     </div>
-    <p>Motivation</p>
+    <p><%= link_to "Motivation", dashboard_motivation_path, class: "text-decoration-none"%></p>
   </div>
 
   <div class="card-dashboard">
     <div class="icon-bg">
       <span class="iconify" data-icon="iwwa:consumption-o"></span>
     </div>
-    <p>Renseigner ma conso</p>
+    <p><%= link_to "Renseigner ma conso", dashboard_new_consumption_path, class: "text-decoration-none"%></p>
   </div>
 </div>
