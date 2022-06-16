@@ -83,3 +83,49 @@
     stroke: black 1px;
   }
 }
+
+.pot-card{
+  background-color: white;
+  margin-bottom: 40px;
+  h1{
+    font-size: 30px;
+    color: #00586B;
+    margin-left: 30px;
+    margin-right: 170px;
+    font-weight: bold;
+  }
+  h2{
+    font-size: 24px;
+    color: #00586B;
+    margin-left: 80px;
+    margin-right: 90px;
+  }
+  #pie-chart {
+    margin: 34px 90px 34px 90px;
+  }
+}
+
+.savings-card{
+  background-color: rgba($color: #59C1BD, $alpha: 0.15);
+  margin-bottom: 40px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  h2{
+    font-size: 24px;
+    font-weight: bold;
+    color: #00586B;
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+}
+
+.line-chart{
+  h2{
+    font-size: 24px;
+    font-weight: bold;
+    color: #00586B;
+    margin-left: 40px;
+    margin-top: 40px;
+    text-align: center;
+  }
+}

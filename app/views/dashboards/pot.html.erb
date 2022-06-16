@@ -1,49 +1,54 @@
 <div class="container">
-<div class= "pot-header">
-  <%# <% if current_user.photo.attached?
-    <%= cl_image_tag current_user.photo.key, height: 300, width: 300, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-  <%# <% else %>
-    <%# <%= image_tag "https://eu.ui-avatars.com/api/?name=#{current_user.first_name}+#{current_user.last_name}", height: 300, width: 400, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-  <%# <% end %>
-  <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-    <%= link_to "Edit", edit_user_registration_path, class: "dropdown-item" %>
-    <%# <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-  <%# </div> %>
-  <div>
-  <img src="", alt="avatar">
-  <%= current_user.first_name %>
-  <%= console %>
-  <img src="", alt="retirer ma cagnotte">
-  </div>
-  <div>
-   <%# <%= link_to "Retirer ma cagnotte", get_my_pot_path, class: "nav-link" %>
-  </div>
-</div>
+  <div class= "pot-header">
+    <%# <% if current_user.photo.attached?
+      <%= cl_image_tag current_user.photo.key, height: 300, width: 300, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    <%# <% else %>
+      <%# <%= image_tag "https://eu.ui-avatars.com/api/?name=#{current_user.first_name}+#{current_user.last_name}", height: 300, width: 400, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    <%# <% end %>
+    <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+      <%= link_to "Edit", edit_user_registration_path, class: "dropdown-item" %>
+      <%# <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+    <%# </div> %>
 
-<div class="cagnotte">
-  <%# style ? title? %>
-  <p>Ma Cagnotte</p>
-  <br>
+    <div>
+      <%= image_tag "carbon_user-avatar.png" %>
+      <%= current_user.first_name %>
+    </div>
 
-  <div>
-  <%# <%= image_tag "pie_chart.png" %>
-  <%= pie_chart({"acquis"=>560, "restant"=>1500}, colors: ["#FFDCF7", "#06C4BE"])%>
+    <div>
+      <%= image_tag "emojione-monotone_money-with-wings.png" %>
+      <%# <%= link_to "Retirer ma cagnotte", get_my_pot_path, class: "nav-link" %>
+    </div>
+
   </div>
 
-  <div>
-  <%# <%= current_user.pot<p>€<p><p>collectés sur<p><%= current_user.objective_amount %><p>560€ collectés sur 1500€<p>
+  <div class="pot-card">
+    <%# style ? title? %>
+    <h1>Ma Cagnotte</h1>
+
+    <div id="pie-chart">
+      <%# <%= image_tag "pie_chart.png" %>
+      <%= pie_chart({"acquis"=>560, "restant"=>1500}, colors: ["#FFDCF7", "#06C4BE"])%>
+    </div>
+
+    <div>
+      <%# <%= current_user.pot<p>€<p><p>collectés sur<p><%= current_user.objective_amount %><h2><strong>560€</strong> collectés sur <strong>1500€</strong><h2>
+    </div>
   </div>
-</div>
 
-<div class="pot-card">
-<p>Mes économies</p>
-</div>
+  <div class="savings-card">
+    <h2>Mes économies <%= image_tag "lucide_cigarette-off.png" %><h2>
+  <p>des boîtes</p>
+  <p>encore des boîtes</p>
+  <p>et une dernière grosse boîte</p>
 
-<div class="line-chart">
-<p>Mes dernières transactions</p>
- <%= line_chart({"2022-06-15" => 2, "2022-06-16" => 3, "2022-06-17" => 4, "2022-06-18" => 2, "2022-06-19" => 3}, colors: ["#06C4BE", "#FFDCF7"]) %>
-<%# <%= line_chart User.group_by_week(:pot, week_start: :monday).count %>
-</div>
+  </div>
 
-<%# <div class "navbar"></div> %>
+  <div class="line-chart">
+    <h2>Mes dernières transactions</h2>
+    <%= line_chart({"2022-06-15" => 2, "2022-06-16" => 3, "2022-06-17" => 4, "2022-06-18" => 2, "2022-06-19" => 3}, colors: ["#06C4BE", "#FFDCF7"]) %>
+    <%# <%= line_chart User.group_by_week(:pot, week_start: :monday).count %>
+  </div>
+
+  <%# <div class "navbar"></div> %>
 </div>
