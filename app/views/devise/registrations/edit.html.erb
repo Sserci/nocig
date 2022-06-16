@@ -1,22 +1,28 @@
 <div class="container">
 
+      <div class="back-arrow">
+        <span class="iconify" data-icon="akar-icons:arrow-left"> <%= link_to "Back", :back %></span>
+      </div>
+
       <div class="profile-info">
         <h1>Mon profil</h1>
         <div class ="icone-profile">
           <span class="iconify" data-icon="carbon:user-avatar"></span>
         </div>
         <%# <h2>Edit <%= resource_name.to_s.humanize %></h2>
-        <%= @user.first_name %>
-        <%= @user.last_name %>
+        <div class="user-name">
+          <%= @user.first_name %>
+          <%= @user.last_name %>
+        </div>
       </div>
 
       <div class="profile-redirect-info">
         <div class="btn btn-bank-info">
-          <a href="#">Modifier mes données bancaires</a>
+          <%= link_to 'Modifier mes données bancaires', profile_bank_path, class:"profile-redirect-info-color"%>
           <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
         </div>
         <div class="btn btn-bank-info">
-          <a href="#">Informations personnelles</a>
+          <a class="profile-redirect-info-color"><%= link_to 'Informations personelles', profile_info_path, class:"profile-redirect-info-color" %>
           <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
         </div>
       </div>
@@ -54,14 +60,8 @@
               </div>
           <% end %>
       </div>
+
+
+    <%# <div>
+      <p>Pas satisfait? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
 </div>
-
-<br>
-<br>
-<br>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>

@@ -10,13 +10,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 30px auto;
 }
 
 .green-btn {
   color: white;
-  width: 300px;
+  width: 230px;
   height: 35px;
   border-radius: 8px;
   background: $custom-green-button;
   transition: background 0.3s ease;
+  margin: 0 auto;
 }
