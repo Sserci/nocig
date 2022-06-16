@@ -7,11 +7,12 @@
                   label: false,
                   placeholder: "Nombre de paquets fumés par semaine",
                   input_html: {class: "form-control-simulation"}%>
-      <%= f.input :cigarette,
-                  required: true,
-                  label: false,
-                  placeholder: "Marque de vos cigarettes",
-                  input_html: {class: "form-control-simulation"} %>
+      <%= f.association :cigarette,
+                        label_method: :brand,
+                        value_method: :id,
+                        include_blank: false,
+                        prompt: "Marque de vos cigarettes"
+                   %>
     </div>
 
     <div class="form-actions">
