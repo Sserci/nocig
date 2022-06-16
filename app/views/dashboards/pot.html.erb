@@ -27,6 +27,7 @@
 
     <div id="pie-chart">
       <%# <%= image_tag "pie_chart.png" %>
+      <%# <%= pie_chart({"acquis"=>current_user.pot, "montant final"=>current_user.objective_amount}, colors: ["#FFDCF7", "#06C4BE"])%>
       <%= pie_chart({"acquis"=>560, "montant final"=>1500}, colors: ["#FFDCF7", "#06C4BE"])%>
     </div>
 
@@ -48,7 +49,7 @@
 
   <div class="line-chart">
     <h2>Mes dernières transactions</h2>
-    <%= line_chart({"2022-06-15" => 2, "2022-06-16" => 3, "2022-06-17" => 4, "2022-06-18" => 2, "2022-06-19" => 3}, colors: ["#06C4BE", "#FFDCF7"]) %>
+    <%= line_chart({"2022-05-20" => 2, "2022-05-27" => 3, "2022-06-03" => 4, "2022-06-10" => 2, "2022-06-17" => 3}, colors: ["#06C4BE", "#FFDCF7"]) %>
   </div>
 
   <%# <div class "navbar"></div> %>
