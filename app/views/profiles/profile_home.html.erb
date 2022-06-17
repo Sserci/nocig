@@ -1,14 +1,19 @@
 <div class="container">
 
-      <div class="back-arrow">
-        <span class="iconify" data-icon="akar-icons:arrow-left"> <%= link_to "Back", :back %></span>
+
+       <div class="back-arrow">
+        <%= link_to dashboard_path, id: "icone-arrow" do %>
+              <i class="iconify" data-icon="akar-icons:arrow-left"></i>
+            <% end %>
       </div>
 
-      <div class="my-profile-h1">
-        <h1>Mon profil</h1>
-      </div>
 
-      <div class="profile-card">
+        <div class="my-profile-h1" >
+          <h1>Mon profil</h1>
+        </div>
+
+
+      <div class="profile-card" >
 
         <div class="profile-card-info">
           <div class ="icone-profile">
@@ -36,23 +41,30 @@
 
         <div class="profile-card-iban">
             <p id="iban">Mon IBAN</p>
-            <%= "#{current_user.iban.first(4)}**************#{current_user.iban.last(4)}" %>
+            <% if current_user.iban %>
+            <%= "#{current_user.iban.first(4)}**************#{current_user.iban.last(4)}"  %>
+            <% else%>
+              <div id="link-bank" <% link_to profile_bank_path%>>
+              <p>Ajouter vos informations bancaires</p>
+              </div>
+            <% end %>
         </div>
 
       </div>
 
+
       <div class="profile-redirect-info">
-        <div class="btn btn-grey-info">
+        <div class="btn btn-grey-info" <% link_to profile_bank_path%>>
           <%= link_to 'Modifier mes données bancaires', profile_bank_path, class:"profile-redirect-info-color"%>
           <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
         </div>
 
-        <div class="btn btn-grey-info">
+        <div class="btn btn-grey-info" <% link_to profile_info_path%>>
           <%= link_to 'Informations personelles', profile_info_path, class:"profile-redirect-info-color"%>
           <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
         </div>
 
-        <div class="btn btn-grey-info">
+        <div class="btn btn-grey-info" <% recover_my_pot_path%>>
           <%= link_to 'Retirez le montant de ma cagnotte', recover_my_pot_path, class:"profile-redirect-info-color"%>
           <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
         </div>
