@@ -49,10 +49,13 @@
 
 .cards{
     display: grid;
-    margin: 36px 63px 63px 63px;
+    margin: 36px 63px 36px 63px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 24px 24px;
+    a{
+      color: black;
+    }
 
   }
 
@@ -66,6 +69,9 @@
     padding: 85px 10px 10px 10px;
     text-align: center;
     font-size: 13px;
+  }
+  a{
+    color: $custom-blue-black
   }
 }
 

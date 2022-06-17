@@ -1,0 +1,10 @@
+<% result = @result.sample %>
+<div class="backgorund-img-result" style="background-image: url(<%= result[:background] %>)"></div>
+<div class="card-result">
+  <p class="result-sentence">Avec ce budget, vous auriez pu vous <br> accorder :</p>
+  <h2 class="result-title"><%= result[:title] %></h2>
+  <div class="arrow">
+    <img src="assets/arrow" alt="">
+  </div>
+  <p class="budget"><%= result[:budget] %>€</p>
+</div>
