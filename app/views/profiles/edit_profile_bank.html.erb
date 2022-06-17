@@ -39,6 +39,10 @@
             <%= f.label :query, "Votre IBAN:" %>
           <div class="form-with-control">
             <%= f.text_field :iban, required: 'required' %>
+            <div class="form-action-with">
+            <%= f.submit "Valider", class:"green-btn" %>
+          <% end %>
+        </div>
           </div>
                         <% if current_user.errors[:iban].any? %>
                           <% current_user.errors[:iban].each do %>
@@ -49,10 +53,7 @@
         <br>
         <br>
         <br>
-        <div class="form-action-with">
-            <%= f.submit "Valider", class:"green-btn" %>
-          <% end %>
-        </div>
+
       </div>
 
     <%# <div>
