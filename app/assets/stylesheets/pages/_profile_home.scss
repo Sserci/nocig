@@ -1,0 +1,58 @@
+.profile-card {
+  background-color: $custom-grey;
+  border-radius: 10px;
+  padding: 10px;
+  width: 320px;
+  height: 170px;
+  margin: 50px auto;
+
+}
+.profile-card-info{
+  display: flex;
+  justify-content: space-between;
+}
+.card-icone {
+  justify-content: flex-end;
+  padding-left: 35px;
+}
+
+#icone-arrow {
+  color: $custom-blue-black;
+  text-decoration: none;
+}
+
+.profile-card-iban {
+  color: $custom-blue-black;
+  padding-left: 35px;
+  padding-top: 10px;
+}
+
+#iban {
+  margin: 0px
+}
+
+.user-name-verified {
+  padding-top: 15px;
+  color: $custom-blue-black;
+}
+
+.my-profile-h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+
+.btn-grey-info {
+  color: $custom-blue-black;
+  width: 300px;
+  height: 55px;
+  border-radius: 8px;
+  background: #DCE5E5;
+  transition: background 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px auto;
+}

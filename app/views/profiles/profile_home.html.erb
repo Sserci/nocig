@@ -1,0 +1,72 @@
+<div class="container">
+
+      <div class="back-arrow">
+        <span class="iconify" data-icon="akar-icons:arrow-left"> <%= link_to "Back", :back %></span>
+      </div>
+
+      <div class="my-profile-h1">
+        <h1>Mon profil</h1>
+      </div>
+
+      <div class="profile-card">
+
+        <div class="profile-card-info">
+          <div class ="icone-profile">
+            <span class="iconify" data-icon="carbon:user-avatar"></span>
+          </div>
+          <%# <h2>Edit <%= resource_name.to_s.humanize %></h2>
+          <div class="user-name-verified">
+            <div class="user-name">
+              <%= current_user.first_name %>
+              <%= current_user.last_name %>
+            </div>
+            <div id="nocig-member">
+              <p>Membre NoCig vérifié</p>
+            </div>
+          </div>
+
+
+          <div class="card-icone">
+            <%= link_to edit_user_registration_path, id: "icone-arrow" do %>
+              <i class="iconify" data-icon="dashicons:arrow-right-alt2"></i>
+            <% end %>
+          </div>
+        </div>
+
+
+        <div class="profile-card-iban">
+            <p id="iban">Mon IBAN</p>
+            <%= "#{current_user.iban.first(4)}**************#{current_user.iban.last(4)}" %>
+        </div>
+
+      </div>
+
+      <div class="profile-redirect-info">
+        <div class="btn btn-grey-info">
+          <%= link_to 'Modifier mes données bancaires', profile_bank_path, class:"profile-redirect-info-color"%>
+          <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
+        </div>
+
+        <div class="btn btn-grey-info">
+          <%= link_to 'Informations personelles', profile_info_path, class:"profile-redirect-info-color"%>
+          <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
+        </div>
+
+        <div class="btn btn-grey-info">
+          <%= link_to 'Retirez le montant de ma cagnotte', recover_my_pot_path, class:"profile-redirect-info-color"%>
+          <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
+        </div>
+
+        <div class="btn btn-grey-info">
+          <%= link_to 'Suivi de mes transactions', withdraw_path, class:"profile-redirect-info-color"%>
+          <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
+        </div>
+
+
+      </div>
+
+
+
+    <%# <div>
+      <p>Pas satisfait? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+</div>

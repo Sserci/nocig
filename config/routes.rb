@@ -17,14 +17,15 @@ Rails.application.routes.draw do
   get '/dashboard/motivation', to: 'dashboards#motivation', as: 'dashboard_motivation'
   get '/dashboard/new_consumption', to: 'dashboards#new_consumption', as: 'dashboard_new_consumption'
   post '/dashboard/consumption', to: 'dashboards#create_consumption', as: 'dashboard_create_consumption'
-  get '/profile', to: 'profile#profile_home', as: 'profile_home'
-  get '/profile/edit/profile_info', to: 'profile#profile_info', as: 'profile_info'
+  get '/profile', to: 'profiles#profile_home', as: 'profile_home'
+  get '/profile/edit/profile_info', to: 'profiles#profile_info', as: 'profile_info'
   # edit_user_registration GET    /users/edit(.:format)
 
   # user_registration PATCH  /users(.:format)
-  get '/profile/edit/profile_bank', to: 'profile#profile_bank', as: 'profile_bank'
+  get '/profile/edit/profile_bank', to: 'profiles#edit_profile_bank', as: 'profile_bank'
+  patch '/profile/edit/profile_bank', to: 'profiles#update_profile_bank'
   #consumptions POST   /consumptions(.:format) consumptions#create
   # new_consumption GET    /consumptions/new(.:format) consumptions#new
-  get '/get_my_pot', to: 'profile#get_my_pot', as: 'get_my_pot'
-  patch '/get_my_pot', to: 'profile#withdraw', as: 'get_my_pot_withdraw'
+  get '/get_my_pot', to: 'profiles#recover_my_pot', as: 'recover_my_pot'
+  patch '/get_my_pot', to: 'profiles#withdraw', as: 'withdraw'
 end
