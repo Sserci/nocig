@@ -31,6 +31,25 @@
   font-weight: bold;
 }
 
+.header-health {
+  background-image: url("bg-dashboard.png");
+  background-position: center;
+  background-size: cover;
+  padding-top: 1%;
+  margin: 30px;
+  .iconify {
+    font-size: 150px;
+    margin-left: 80px;
+    color: #949494;
+    background-color: #D9D9D9;
+    border-radius: 100px;
+  }
+  p {
+    font-size: 30px;
+    color: #00586B;
+    margin-left: 40px;
+  }
+
 #day {
   color: $custom-green-button;
 }
