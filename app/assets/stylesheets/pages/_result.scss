@@ -33,3 +33,33 @@
   justify-content: center;
   margin-bottom: 35px;
 }
+.detail-cost {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.detail-cost p {
+  line-height: 0.7em;
+  color: $custom-blue-black;
+}
+.logo-result {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.btn-begin-pot {
+  width: 130px;
+  height: 38px;
+  font-size: 13px;
+  background-color: $custom-pink;
+  text-align: center;
+  color: $custom-blue-black;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+}
