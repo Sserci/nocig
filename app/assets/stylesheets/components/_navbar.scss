@@ -1,6 +1,32 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar{
+  justify-content: space-around;
+  background-color: $custom-green-button;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+}
+
+.menu{
+  height: 100%;
+  text-align: center;
+  .iconify {
+   font-size: 30px;
+   color: white;
+   opacity: 50%;
+   &.active {
+    color: white;
+    opacity: 100%;
+   }
+  }
+
+  a {
+    color: white;
+    opacity: 70%;
+  }
+  p{
+    font-size: 14px;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

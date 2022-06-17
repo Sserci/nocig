@@ -1,7 +1,9 @@
 <div class="container">
 
       <div class="back-arrow">
-        <span class="iconify" data-icon="akar-icons:arrow-left"> <%= link_to "Back", :back %></span>
+        <%= link_to profile_home_path, id: "icone-arrow" do %>
+              <i class="iconify" data-icon="akar-icons:arrow-left"></i>
+            <% end %>
       </div>
 
       <div class="profile-info">

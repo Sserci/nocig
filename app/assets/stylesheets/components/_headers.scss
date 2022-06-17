@@ -1,20 +1,22 @@
-
 .header-dashboard{
-  background-color: rgba(89, 193, 190, 0.250);
+  background-image: url("assets/bg-dashboard.png");
+  background-size: cover;
   padding-top: 1%;
 }
 .header-dashboard-info{
-  margin: 30px;
+  margin: 23px;
   h2 {
     font-size: 24px;
     color: #06C4BE;
   }
   p {
     font-size: 15px;
+    color: $custom-blue-black
   }
   .iconify {
     font-size: 95px;
     margin-left: 120px;
+    color: black;
   }
 }
 .header-pink {
@@ -47,4 +49,8 @@
     color: #00586B;
     margin-left: 40px;
   }
+}
+
+#day {
+  color: $custom-green-button;
 }
