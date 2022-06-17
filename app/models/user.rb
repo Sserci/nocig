@@ -2,9 +2,9 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :consumptions
-  validate :presence_age, :presence_gender, :presence_objective_amount, :presence_pot
+  validate :presence_age, :presence_gender, :presence_objective_amount, :presence_pot, :presence_iban
   validates :email, :first_name, :last_name, presence: true
-  # validates :iban, format: {with: /FR\d{12}[A-Z0-9]{11}\d{2}/ }
+  # validates :iban, format: { with: /FR\d{12}[A-Z0-9]{11}\d{2}/ }
   # validates :age, numericality: { only_integer: true, greater_than: 10 }
   # validates :gender, inclusion: { in: %w(Femme Homme Autre)}
 
@@ -19,7 +19,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def presence_iban
-    if iban? && iban.match(/FR\d{12}[A-Z0-9]{11}\d{2}/)
+    if iban? && !iban.match(/FR\d{12}[A-Z0-9]{11}\d{2}/)
       errors.add(:iban, "should be a valid iban")
     end
   end

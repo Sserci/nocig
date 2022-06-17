@@ -5,7 +5,16 @@ class ProfilesController < ApplicationController
   def profile_info
   end
 
-  def profile_bank
+  def edit_profile_bank
+  end
+
+  def update_profile_bank
+    current_user.iban = params[:iban]
+    if current_user.save
+      redirect_to profile_home_path
+    else
+      render :edit_profile_bank
+    end
   end
 
   def recover_my_pot
