@@ -5,6 +5,31 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.card-result {
+  border-radius: 20px 20px 20px 20px;
+  position: relative;
+  top: -10px;
+  z-index: 1;
+  background-color: white;
+}
 .result-title {
   text-align: center;
+  margin-bottom: 60px;
+}
+.result-sentence {
+  padding-top: 23px;
+  text-align: center;
+  margin-bottom: 12px;
+  color: $custom-blue-black;
+}
+.budget {
+  text-align: center;
+  color: $custom-blue-black;
+  font-weight: bold;
+  font-size: 32px;
+}
+.arrow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
 }

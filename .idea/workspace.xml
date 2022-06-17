@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a34f23f-1699-4a04-8ca4-0ff4e5dfdd20" name="Changes" comment="fix background">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/thailande.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/vespa.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages/_result.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/consumptions_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/pages/result.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/consumptions_controller_test.rb" afterDir="false" />
+    <list default="true" id="0a34f23f-1699-4a04-8ca4-0ff4e5dfdd20" name="Changes" comment="begin result page">
+      <change afterPath="$PROJECT_DIR$/app/assets/images/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/canape.avif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/canape.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/laptop.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/macbook.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/marrakech.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/restaurant.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/rome.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/rome.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/tv.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages/_result.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages/_result.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/consumptions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/consumptions_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/result.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/result.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -396,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655371161264</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="begin result page">
+      <created>1655395464606</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655395464606</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,6 +433,7 @@
     <MESSAGE value="modification of validates user &amp; begin home page" />
     <MESSAGE value="fix background" />
     <MESSAGE value="add .idea to gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add .idea to gitignore" />
+    <MESSAGE value="begin result page" />
+    <option name="LAST_COMMIT_MESSAGE" value="begin result page" />
   </component>
 </project>

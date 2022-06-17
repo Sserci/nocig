@@ -1,7 +1,7 @@
 class ConsumptionsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :create ]
   def create
     @consumption = Consumption.new(consumption_params)
-    #@consumption.user = current_user
     if @consumption.save
       redirect_to result_path(result: @consumption)
     else
