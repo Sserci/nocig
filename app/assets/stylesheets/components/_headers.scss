@@ -1,4 +1,3 @@
-
 .header-dashboard{
   background-image: url("assets/bg-dashboard.png");
   background-size: cover;
@@ -12,10 +11,12 @@
   }
   p {
     font-size: 15px;
+    color: $custom-blue-black
   }
   .iconify {
     font-size: 95px;
     margin-left: 120px;
+    color: black;
   }
 }
 .header-pink {
@@ -28,4 +29,8 @@
 }
 .consommation-title {
   font-weight: bold;
+}
+
+#day {
+  color: $custom-green-button;
 }
