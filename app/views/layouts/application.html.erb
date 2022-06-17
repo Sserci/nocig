@@ -18,6 +18,12 @@
   </head>
 
   <body>
+    <%= render 'shared/navbar' if current_page?(dashboard_path)%>
+    <%= render 'shared/navbar' if current_page?(dashboard_health_path)%>
+    <%= render 'shared/navbar' if current_page?(dashboard_pot_path)%>
+    <%= render 'shared/navbar' if current_page?(dashboard_motivation_path)%>
+    <%= render 'shared/navbar' if current_page?(profile_home_path)%>
+    <%= render 'shared/navbar' if current_page?(dashboard_new_consumption_path)%>
     <%= render 'shared/flashes' %>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <%= yield %>
