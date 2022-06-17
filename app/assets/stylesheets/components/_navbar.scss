@@ -2,6 +2,9 @@
   justify-content: space-around;
   background-color: $custom-green-button;
   height: 60px;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
 }
 
 .menu{
@@ -10,8 +13,13 @@
   .iconify {
    font-size: 30px;
    color: white;
-   opacity: 60%;
+   opacity: 50%;
+   &.active {
+    color: white;
+    opacity: 100%;
+   }
   }
+
   a {
     color: white;
     opacity: 70%;
