@@ -9,4 +9,10 @@ class DashboardsController < ApplicationController
   def dashboard
     @time = Time.new
   end
+
+  def new_consumption
+    @user = current_user
+    @new_consumption = Consumption.new
+  end
+
 end

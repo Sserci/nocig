@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get '/dashboard/pot', to: 'dashboards#pot', as: 'dashboard_pot'
   get '/dashboard/health', to: 'dashboards#health', as: 'dashboard_health'
   get '/dashboard/motivation', to: 'dashboards#motivation', as: 'dashboard_motivation'
-  get '/dashboard/consumption', to: 'dashboards#new_consumption', as: 'dashboard_new_consumption'
+  get '/dashboard/new_consumption', to: 'dashboards#new_consumption', as: 'dashboard_new_consumption'
   post '/dashboard/consumption', to: 'dashboards#create_consumption', as: 'dashboard_create_consumption'
   get '/profile', to: 'profile#profile_home', as: 'profile_home'
   get '/profile/edit/profile_info', to: 'profile#profile_info', as: 'profile_info'

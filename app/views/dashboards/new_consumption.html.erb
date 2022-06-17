@@ -1,0 +1,13 @@
+<h1>hello</h1>
+
+
+<div class="container-simulation-form">
+  <%= simple_form_for(@user, @consumption) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :quantity,
+                  required: true,
+                  label: false,
+                  placeholder: "Nombre de paquets fumés par semaine",
+                  input_html: {class: "form-control-simulation"}%>
+    </div>
