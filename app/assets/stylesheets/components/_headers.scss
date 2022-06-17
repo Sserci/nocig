@@ -30,7 +30,9 @@
 }
 
 .header-health {
-  background-color: rgba(89, 193, 190, 0.250);
+  background-image: url("bg-dashboard.png");
+  background-position: center;
+  background-size: cover;
   padding-top: 1%;
   margin: 30px;
   .iconify {
