@@ -22,4 +22,7 @@ class ProfilesController < ApplicationController
 
   def withdraw
   end
+
+  def avatar
+  end
 end
