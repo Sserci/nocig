@@ -19,6 +19,8 @@
     <p>Coût sur 10 ans: <%= (@cost * 10).round %>€</p>
     <p>Coût sur 30 ans: <%= (@cost * 30).round %>€</p>
   </div>
+  <div class="button-container-result">
+    <%= link_to("Commencer à cagnotter", new_user_session_path, class: "btn-begin-pot") %>
+  </div>
 </div>
-<%= image_tag("Logo.png", style: {height: ": 60px"}, class: "logo-result")%>
-<%= link_to("Commencer à cagnotter", new_user_session_path, class: "btn-begin-pot") %>
+
