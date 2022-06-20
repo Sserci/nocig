@@ -13,7 +13,7 @@ class PagesController < ApplicationController
 
   def result
     @result = []
-    @simulation = Consumption.find(params[:result])
+    @simulation = Consumption.find(session[:consumption]["id"])
     @superior_to_1000 = [{
                        background: "assets/thailande",
                        title: "Voyage en Thailande",
