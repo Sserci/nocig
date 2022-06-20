@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a34f23f-1699-4a04-8ca4-0ff4e5dfdd20" name="Changes" comment="begin result page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0a34f23f-1699-4a04-8ca4-0ff4e5dfdd20" name="Changes" comment="Fix pwa icon" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -394,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655395464606</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix pwa icon">
+      <created>1655714252496</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655714252496</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,6 +425,7 @@
     <MESSAGE value="fix background" />
     <MESSAGE value="add .idea to gitignore" />
     <MESSAGE value="begin result page" />
-    <option name="LAST_COMMIT_MESSAGE" value="begin result page" />
+    <MESSAGE value="Fix pwa icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix pwa icon" />
   </component>
 </project>
