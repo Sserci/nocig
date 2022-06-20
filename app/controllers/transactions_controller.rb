@@ -20,4 +20,5 @@ class TransactionsController < ApplicationController
 
   def transaction_params
     params.require(:transaction).permit(:user, :date, :packs_number)
+  end
 end
