@@ -1,10 +1,24 @@
 <% result = @result.sample %>
-<div class="backgorund-img-result" style="background-image: url(<%= result[:background] %>)"></div>
+<div class="backgorund-img-result" style="background-image: url(<%= result[:background] %>)">
+  <div class="back-arrow">
+    <%= link_to 'Back', onclick: "window.history.back();", id: "icone-arrow" do %>
+      <i class="iconify" data-icon="akar-icons:arrow-left"></i>
+    <% end %>
+  </div>
+</div>
 <div class="card-result">
   <p class="result-sentence">Avec ce budget, vous auriez pu vous <br> accorder :</p>
   <h2 class="result-title"><%= result[:title] %></h2>
   <div class="arrow">
     <img src="assets/arrow" alt="">
   </div>
-  <p class="budget"><%= result[:budget] %>€</p>
+  <p class="budget"><%= @cost.round %>€</p>
+  <div class="detail-cost">
+    <p>Coût par mois: <%= (@cost / 12).round %>€</p>
+    <p>Coît par an: <%= @cost.round  %>€</p>
+    <p>Coût sur 10 ans: <%= (@cost * 10).round %>€</p>
+    <p>Coût sur 30 ans: <%= (@cost * 30).round %>€</p>
+  </div>
 </div>
+<%= image_tag("Logo.png", style: {height: ": 60px"}, class: "logo-result")%>
+<%= link_to("Commencer à cagnotter", new_user_session_path, class: "btn-begin-pot") %>

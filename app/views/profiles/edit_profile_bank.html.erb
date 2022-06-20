@@ -18,17 +18,6 @@
         </div>
       </div>
 
-      <div class="profile-redirect-info">
-        <div class="btn btn-bank-info">
-          <%= link_to 'Modifier mes données bancaires', profile_bank_path, class:"profile-redirect-info-color"%>
-          <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
-        </div>
-        <div class="btn btn-bank-info">
-          <a class="profile-redirect-info-color"><%= link_to 'Informations personelles', profile_info_path, class:"profile-redirect-info-color" %>
-          <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
-        </div>
-      </div>
-
       <div class="iban-update">
         <div class="form-input-with">
           <%= form_with url: profile_bank_path, method: :patch do |f| %>
@@ -39,6 +28,10 @@
             <%= f.label :query, "Votre IBAN:" %>
           <div class="form-with-control">
             <%= f.text_field :iban, required: 'required' %>
+            <div class="form-action-with">
+            <%= f.submit "Valider", class:"green-btn" %>
+          <% end %>
+        </div>
           </div>
                         <% if current_user.errors[:iban].any? %>
                           <% current_user.errors[:iban].each do %>
@@ -49,10 +42,7 @@
         <br>
         <br>
         <br>
-        <div class="form-action-with">
-            <%= f.submit "Valider", class:"green-btn" %>
-          <% end %>
-        </div>
+
       </div>
 
     <%# <div>
