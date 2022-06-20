@@ -28,6 +28,8 @@ Rails.application.routes.draw do
   #consumptions POST   /consumptions(.:format) consumptions#create
   # new_consumption GET    /consumptions/new(.:format) consumptions#new
   get '/get_my_pot', to: 'profiles#recover_my_pot', as: 'recover_my_pot'
-  get '/profile/edit/avatar', to: 'profiles#avatar', as: 'avatar'
   patch '/get_my_pot', to: 'profiles#withdraw', as: 'withdraw'
+  get '/profile/edit/avatar', to: 'profiles#avatar_base', as: 'avatar'
+  patch '/profile/edit/avatar', to: 'profiles#avatar', as: 'update_avatar'
+
 end
