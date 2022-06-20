@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a34f23f-1699-4a04-8ca4-0ff4e5dfdd20" name="Changes" comment="begin result page">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/canape.avif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/canape.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/laptop.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/macbook.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/marrakech.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/restaurant.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/rome.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/rome.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/tv.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages/_result.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages/_result.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/consumptions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/consumptions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/result.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/result.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

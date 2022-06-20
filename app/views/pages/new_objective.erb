@@ -1,0 +1,34 @@
+
+<div class="conso-container">
+  <div class="header-pink">
+    <h1 class="consommation-title">Objectif</h1>
+  </div>
+
+  <div class="cig-img">
+    <%= image_tag("target.png", style: {height: ": 100px"})%>
+  </div>
+
+  <p class="conso-asking">Quel est votre projet avec l’argent économisé de vos cigarettes ?  ?</p>
+
+  <div class="new-objective">
+    <div class="form-input-with">
+      <%= form_with url: show_objective_path, method: :get do |f| %>
+        <%= f.label :query, "Quel est votre objectif :" %>
+      <div class="form-with-control">
+        <%= f.text_field :objective_title %>
+      </div>
+        <%= f.label :query, "Quel est le budget de votre objectif :" %>
+      <div class="form-with-control">
+        <%= f.text_field :objective_amount, required: 'required' %>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-action-with">
+        <%= f.submit "Valider", class:"green-btn" %>
+      <% end %>
+    </div>
+  </div>
+
+</div>

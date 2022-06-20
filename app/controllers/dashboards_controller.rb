@@ -14,5 +14,4 @@ class DashboardsController < ApplicationController
     @user = current_user
     @new_consumption = Consumption.new
   end
-
 end
