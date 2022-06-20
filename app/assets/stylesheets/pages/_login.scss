@@ -1,0 +1,75 @@
+.btn-apple {
+  background-color: black;
+  color: white;
+  width: 270px;
+  height: 56px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 8px;
+  padding: 20px;
+
+  p {
+    margin: 0 0;
+  }
+
+}
+
+.btn-facebook {
+  background-color: #3B5998;
+  color: white;
+  width: 270px;
+  height: 56px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 8px;
+  padding: 20px;
+
+  p {
+    margin: 0 0;
+  }
+}
+
+
+.btn-google {
+  background-color: transparent;
+  color: black;
+  width: 270px;
+  height: 56px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid black;
+
+  p {
+    margin: 0 0;
+  }
+}
+
+
+.btn-mail {
+  background-color: $custom-green-button;
+  color: white;
+  width: 270px;
+  height: 56px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 8px;
+  padding: 20px;
+
+  p {
+    margin: 0 0;
+  }
+}

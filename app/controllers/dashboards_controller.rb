@@ -1,6 +1,9 @@
 class DashboardsController < ApplicationController
   def pot
-    # @pot = Pot.new
+    @all_transactions = {}
+    current_user.transactions.each do |t|
+      @all_transactions["t.date"] = t.packs_number
+    end
   end
 
   def objective_amount
@@ -8,10 +11,5 @@ class DashboardsController < ApplicationController
 
   def dashboard
     @time = Time.new
-  end
-
-  def new_consumption
-    @user = current_user
-    @new_consumption = Consumption.new
   end
 end
