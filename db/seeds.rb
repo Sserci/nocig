@@ -5,7 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+<<<<<<< HEAD
 Transaction.destroy_all
+=======
+>>>>>>> f7b4404aff6a9b17283a2c496007e5bfa8df7632
 Consumption.destroy_all
 Cigarette.destroy_all
 User.destroy_all

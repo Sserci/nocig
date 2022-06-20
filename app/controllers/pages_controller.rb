@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :simulation, :result ]
+  skip_before_action :authenticate_user!, only: [ :home, :simulation, :result, :login ]
+
+  def login
+  end
 
   def home
   end
@@ -10,7 +13,7 @@ class PagesController < ApplicationController
 
   def result
     @result = []
-    @simulation = Consumption.find(params[:result])
+    @simulation = Consumption.find(session[:consumption]["id"])
     @superior_to_1000 = [{
                        background: "assets/thailande",
                        title: "Voyage en Thailande",
@@ -66,6 +69,7 @@ class PagesController < ApplicationController
   end
 
   def create_objective
+    current_user.objective_title = params[:objective_title]
     current_user.objective_amount = params[:objective_amount]
     if current_user.save
       redirect_to show_objective_path
@@ -75,5 +79,6 @@ class PagesController < ApplicationController
   end
 
   def show_objective
+    @consumption = Consumption.find_by(user_id: current_user.id)
   end
 end
