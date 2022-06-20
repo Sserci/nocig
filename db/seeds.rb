@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Cigarette.destroy_all
 Consumption.destroy_all
+Cigarette.destroy_all
 User.destroy_all
 
 benson = Cigarette.create(brand: "Benson & Hedges blue", price: 10)
