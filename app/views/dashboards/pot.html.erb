@@ -11,13 +11,16 @@
     <%# </div> %>
 
     <div>
-      <%= image_tag "carbon_user-avatar.png" %>
+      <%= link_to profile_home_path do %>
+        <%= image_tag "carbon_user-avatar.png" %>
+      <% end %>
       <%= current_user.first_name %>
     </div>
 
     <div>
-      <%= image_tag "emojione-monotone_money-with-wings.png" %>
-      <%# <%= link_to "Retirer ma cagnotte", get_my_pot_path, class: "nav-link" %>
+      <%= link_to recover_my_pot_path do %>
+        <%= image_tag "emojione-monotone_money-with-wings.png" %>
+      <% end %>
     </div>
 
   </div>
@@ -51,6 +54,7 @@
     <h2>Mes dernières transactions</h2>
     <%= line_chart({"2022-05-20" => 2, "2022-05-27" => 3, "2022-06-03" => 4, "2022-06-10" => 2, "2022-06-17" => 3}, colors: ["#06C4BE", "#FFDCF7"]) %>
   </div>
-
-  <%# <div class "navbar"></div> %>
+  <br>
+  <br>
+  <br>
 </div>

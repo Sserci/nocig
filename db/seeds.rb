@@ -26,3 +26,5 @@ Cigarette.create(brand: "Vogue L'Originale Bleue", price: 10.50)
 Cigarette.create(brand: "Winfield rouge", price: 9.90)
 Cigarette.create(brand: "Winston Authentic", price: 10.20)
 Cigarette.create(brand: "Winston Blue", price: 10)
+
+User.create(email: "gb@gmail.com", password: 123456, first_name: "greg", last_name: "bert")
