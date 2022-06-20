@@ -17,13 +17,24 @@
 .form-actions {
   display: flex;
   justify-content: center;
+  color: white;
 }
 .form-inputs {
   display: flex;
   align-items: center;
   flex-direction: column;
+  color: $custom-blue-black;
 }
 
+// SIMPLE_FORM_INSCRIPTION //
+
+.form-inputs-inscription {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  color: $custom-blue-black;
+}
 
 
 // FORM_WITH //

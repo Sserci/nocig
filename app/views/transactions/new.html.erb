@@ -10,13 +10,13 @@
   <p class="conso-asking">Quelle est votre consommation cette semaine?</p>
 
  <div class="container-simulation-form">
-  <%= simple_form_for(@user, @consumption) do |f| %>
+  <%= simple_form_for(@transaction) do |f| %>
     <%= f.error_notification %>
     <div class="form-inputs">
-      <%= f.input :quantity,
+      <%= f.input :packs_number,
                   required: true,
                   label: false,
-                  placeholder: "Nombre de paquets fumés par semaine",
+                  placeholder: "Nombre de paquets fumés cette semaine",
                   input_html: {class: "form-control-simulation"}%>
     </div>
 

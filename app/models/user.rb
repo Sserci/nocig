@@ -2,6 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :consumptions
+  has_many :transactions
   validate :presence_age, :presence_gender, :presence_objective_amount, :presence_pot, :presence_iban
   validates :email, :first_name, :last_name, presence: true
   # validates :iban, format: { with: /FR\d{12}[A-Z0-9]{11}\d{2}/ }
