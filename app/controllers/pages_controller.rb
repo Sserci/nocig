@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :simulation, :result ]
+  skip_before_action :authenticate_user!, only: [ :home, :simulation, :result, :login ]
+
+  def login
+  end
 
   def home
   end
@@ -76,4 +79,7 @@ class PagesController < ApplicationController
 
   def show_objective
   end
+
+
+
 end
