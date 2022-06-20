@@ -5,8 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Cigarette.destroy_all
+Consumption.destroy_all
+User.destroy_all
 
-Cigarette.create(brand: "Benson & Hedges blue", price: 10)
+benson = Cigarette.create(brand: "Benson & Hedges blue", price: 10)
 Cigarette.create(brand: "Camel Black", price: 10)
 Cigarette.create(brand: "Camel Blue", price: 10)
 Cigarette.create(brand: "Chesterfield blue", price: 10)
@@ -27,4 +30,6 @@ Cigarette.create(brand: "Winfield rouge", price: 9.90)
 Cigarette.create(brand: "Winston Authentic", price: 10.20)
 Cigarette.create(brand: "Winston Blue", price: 10)
 
-User.create(email: "gb@gmail.com", password: 123456, first_name: "greg", last_name: "bert")
+user1 = User.create(email: "gb@gmail.com", password: 123456, first_name: "greg", last_name: "bert")
+
+Consumption.create(quantity: 4, cigarette: benson, user: user1, date: Date.today)
