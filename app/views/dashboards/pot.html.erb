@@ -50,6 +50,6 @@
 
   <div class="line-chart">
     <h2>Mes dernières transactions</h2>
-    <%= line_chart({"2022-05-20" => 2, "2022-05-27" => 3, "2022-06-03" => 4, "2022-06-10" => 2, "2022-06-17" => 3}, colors: ["#06C4BE", "#FFDCF7"]) %>
+    <%= line_chart(@all_transactions, colors: ["#06C4BE", "#FFDCF7"]) %>
   </div>
  </div>
