@@ -93,19 +93,18 @@
 
 .pot-card{
   background-color: white;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  text-align: center;
   h1{
     font-size: 30px;
     color: #00586B;
-    margin-left: 30px;
-    margin-right: 170px;
     font-weight: bold;
+    margin-bottom: 16px;
   }
   h2{
     font-size: 24px;
     color: #00586B;
-    margin-left: 80px;
-    margin-right: 90px;
+    margin-bottom: 16px;
   }
   #pie-chart {
     margin: 10px 40px;
@@ -114,7 +113,7 @@
 
 .savings-card{
   background-color: rgba($color: #59C1BD, $alpha: 0.15);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   padding: 24px;
@@ -122,8 +121,8 @@
     font-size: 24px;
     font-weight: bold;
     color: #00586B;
-    margin-left: 40px;
-    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 16px;
   }
 }
 
@@ -132,8 +131,6 @@
     font-size: 24px;
     font-weight: bold;
     color: #00586B;
-    margin-left: 40px;
-    margin-top: 40px;
     text-align: center;
   }
   margin-bottom: 80px;
