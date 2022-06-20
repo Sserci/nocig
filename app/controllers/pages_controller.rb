@@ -69,6 +69,7 @@ class PagesController < ApplicationController
   end
 
   def create_objective
+    current_user.objective_title = params[:objective_title]
     current_user.objective_amount = params[:objective_amount]
     if current_user.save
       redirect_to show_objective_path
@@ -78,6 +79,7 @@ class PagesController < ApplicationController
   end
 
   def show_objective
+    @consumption = Consumption.find(current_user.id)
   end
 
 
