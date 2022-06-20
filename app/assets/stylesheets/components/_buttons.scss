@@ -23,6 +23,19 @@
   margin: 0 auto;
 }
 
-.btn-continuer{
-
+.btn-continuer {
+  background-color: $custom-pink;
+  width: 130px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  p {
+    color: $custom-blue-black;
+    text-decoration: none;
+    font-size: 13px;
+    padding-top: 11px;
+  }
 }

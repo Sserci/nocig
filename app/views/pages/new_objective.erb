@@ -8,11 +8,11 @@
     <%= image_tag("target.png", style: {height: ": 100px"})%>
   </div>
 
-  <p class="conso-asking">Quel est votre projet avec l’argent économisé de vos cigarettes ?  ?</p>
+  <p class="conso-asking">Quel est votre projet avec l’argent économisé de vos cigarettes ?</p>
 
   <div class="new-objective">
     <div class="form-input-with">
-      <%= form_with url: show_objective_path, method: :get do |f| %>
+      <%= form_with url: create_objective_path, method: :post do |f| %>
         <%= f.label :query, "Quel est votre objectif :" %>
       <div class="form-with-control">
         <%= f.text_field :objective_title %>

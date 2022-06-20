@@ -1,19 +1,24 @@
-<div class="backgorund-img-result" style="background-image: url('assets/thailande.jpeg')"></div>
+<div class="background-img-objective"></div>
 <div class="card-result">
   <p class="result-sentence">Un peu de volonté pour un projet<br>qui te tient à coeur :</p>
-  <h2 class="result-title"> Voyage en Thailand</h2>
-  <div class="arrow">
-    <img src="assets/arrow" alt="">
+  <h2 class="result-title"> <%= current_user.objective_title %></h2>
+  <div class="arrow-objective">
+    <img src="/assets/arrow" alt="">
   </div>
-  <p class="budget">1500€</p>
-  <p class="result-sentence">Dans 150 jours, tu auras économisé 1500€ en<br>ayant pas fumé 150 paquets soit 3000 cigarettes</p>
+  <p class="budget"> <%= current_user.objective_amount %>€</p>
+  <p class="result-sentence">Dans <%= current_user.objective_amount / (@consumption.quantity * 10) * 7%> jours, tu auras économisé <%= current_user.objective_amount%>€ en<br>évitant d'acheter <%= current_user.objective_amount / 10 %> paquets soit <%= current_user.objective_amount / 10 * 20 %> cigarettes</p>
 </div>
 
-<div class="footer_card d-flex align-items-center">
-  <div class="logo">
+
+  <%= link_to dashboard_path, class: "text-decoration-none" do %>
+  <div class="btn-continuer">
+    <p> Continuer</p>
+  </div>
+  <% end %>
+
+  <div class="logo d-flex justify-content-center mt-4">
     <img style="height : 60px" src="/assets/Logo.png">
   </div>
-  <div class="btn-continuer">
-    <%= link_to "Continuer", dashboard_path, class: "text-decoration-none"%>
-  </div>
+
+<div class="footer_card d-flex align-items-center">
 </div>

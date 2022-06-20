@@ -54,3 +54,10 @@
 #day {
   color: $custom-green-button;
 }
+
+.background-img-objective {
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  background-image: url('assets/thailande.jpeg');
+}
