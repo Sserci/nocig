@@ -4,7 +4,7 @@ class ConsumptionsController < ApplicationController
     @consumption = Consumption.new(consumption_params)
     if @consumption.save
       session[:consumption] = @consumption
-      redirect_to result_path
+      redirect_to result_path(discover: true)
     else
       redirect_to simulation_path
     end

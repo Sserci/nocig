@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
-  root to: 'pages#home'
+  authenticated :user do
+    root to: "dashboards#dashboard", as: "authenticated_root"
+  end
+  unauthenticated :user do
+    root to: "pages#home"
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :consumptions, only: [:new, :create] do
     resources :cigarettes, only: [:create]
