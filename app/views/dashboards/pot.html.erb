@@ -29,7 +29,6 @@
     <h1>Ma Cagnotte</h1>
 
     <div id="pie-chart">
-      <%# <%= image_tag "pie_chart.png" %>
       <%= pie_chart({"acquis"=>current_user.pot, "montant final"=>current_user.objective_amount}, colors: ["#FFDCF7", "#06C4BE"])%>
     </div>
 
