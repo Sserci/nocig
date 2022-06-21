@@ -4,7 +4,6 @@ class DashboardsController < ApplicationController
     current_user.transactions.each do |t|
       @all_transactions[t.date] = t.amount
     end
-    console
   end
 
   def objective_amount
