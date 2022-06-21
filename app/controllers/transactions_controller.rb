@@ -14,6 +14,12 @@ class TransactionsController < ApplicationController
     @transaction_amount = @delta * @cigarette_price
     @transaction.amount = @transaction_amount
     @transaction.save
+    current_user.pot += @transaction_amount
+    if current_user.save
+      redirect_to dashboard_pot_path
+    else
+      render :new
+    end
   end
 
   private
