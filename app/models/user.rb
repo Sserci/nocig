@@ -78,4 +78,29 @@ class User < ApplicationRecord
   def objective_duration
     (self.objective_amount / self.daily_economy).round
   end
+
+  def usage_days
+    @usage_days = (Date.today.to_date - self.created_at.to_date).to_i
+  end
+
+  def total_packs_number
+    @transaction = Transaction.where(user: current_user)
+    total_packs_number = []
+    @transaction.each do |transaction|
+      total_packs_number << transaction.packs_number
+    end
+    total_packs_number.sum
+  end
+
+  def total_packs_number
+    total_packs_number = []
+    self.transactions.each do |transaction|
+      total_packs_number << transaction.packs_number
+    end
+    total_packs_number.sum
+  end
+
+  def total_cigarettes
+    @total_cigarettes = self.total_packs_number * 20
+  end
 end

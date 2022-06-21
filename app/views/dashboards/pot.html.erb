@@ -1,20 +1,14 @@
 <div class="container" style="width: 100vw;">
   <div class= "pot-header">
-    <%# <% if current_user.photo.attached?
-      <%= cl_image_tag current_user.photo.key, height: 300, width: 300, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-    <%# <% else %>
-      <%# <%= image_tag "https://eu.ui-avatars.com/api/?name=#{current_user.first_name}+#{current_user.last_name}", height: 300, width: 400, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-    <%# <% end %>
-    <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-      <%= link_to "Edit", edit_user_registration_path, class: "dropdown-item" %>
-      <%# <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-    <%# </div> %>
-
     <div>
-      <%= link_to profile_home_path do %>
-        <%= image_tag "carbon_user-avatar.png" %>
+      <%= link_to profile_home_path, id: "icone-arrow" do %>
+        <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, height: 300, width: 300, crop: :fill, class: "rounded-circle" %>
+        <% else %>
+          <%= image_tag "https://eu.ui-avatars.com/api/?name=#{current_user.first_name}+#{current_user.last_name}", height: 400, width: 400, crop: :fill, class: "avatar-large" %>
+        <% end %>
       <% end %>
-      <%= current_user.first_name %>
+       <%= current_user.first_name %>
     </div>
 
     <div>
@@ -40,10 +34,10 @@
   <div class="savings-card">
     <h2>Mes économies <%= image_tag "lucide_cigarette-off.png" %><h2>
     <div class="wrapper">
-      <div class="item1"> <h3>56<p>paquets</p></h3></div>
-      <div class="item2"><h3>1120<p>cigarettes</p></h3></div>
-      <div class="item3"><h3>J56<p> sans fumer</p></h3></div>
-      <div class="item4"><h3><p>Voyage en Thaïlande</p>J-39</h3></div>
+      <div class="item1"> <h3> <%= current_user.total_packs_number %> <p>paquets</p></h3></div>
+      <div class="item2"><h3><%= current_user.total_cigarettes %><p>cigarettes</p></h3></div>
+      <div class="item3"><h3>J <%= current_user.usage_days %><p> sans fumer</p></h3></div>
+      <div class="item4"><h3><%= current_user.objective_title %> J -<%= current_user.objective_duration %></h3></div>
     </div>
   </div>
 
