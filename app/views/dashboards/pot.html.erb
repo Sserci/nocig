@@ -40,10 +40,10 @@
   <div class="savings-card">
     <h2>Mes économies <%= image_tag "lucide_cigarette-off.png" %><h2>
     <div class="wrapper">
-      <div class="item1"> <h3>56<p>paquets</p></h3></div>
+      <div class="item1"> <h3> <% current_user.total_packs_number %><p>paquets</p></h3></div>
       <div class="item2"><h3>1120<p>cigarettes</p></h3></div>
       <div class="item3"><h3>J56<p> sans fumer</p></h3></div>
-      <div class="item4"><h3><p>Voyage en Thaïlande</p>J-39</h3></div>
+      <div class="item4"><h3><p>Voyage en Thaïlande</p>J-<% current_user.objective_duration %></h3></div>
     </div>
   </div>
 
