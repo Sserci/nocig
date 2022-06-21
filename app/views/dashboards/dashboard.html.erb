@@ -17,7 +17,7 @@
   </div>
 
   <div class="card-recap">
-    <h2>Objectif</h2>
+    <h2><%= current_user.objective_title  %></h2>
     <p id="days-left">J-<%= current_user.objective_duration %></p>
 
     <div class="pot-growth">
