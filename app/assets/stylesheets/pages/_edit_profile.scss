@@ -24,9 +24,15 @@
 }
 
 .back-arrow .iconify{
+  display: flex;
+  justify-content: space-between;
   height: 30px;
   width: 50px;
   color: $custom-blue-black;
-  margin-top: 20px;
-  margin-bottom: 20px;
+}
+
+.back-arrow{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
 }

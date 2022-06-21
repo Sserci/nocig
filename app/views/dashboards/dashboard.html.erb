@@ -6,7 +6,7 @@
               <% if current_user.photo.attached? %>
                 <%= cl_image_tag current_user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle" %>
               <% else %>
-                <%= image_tag "https://eu.ui-avatars.com/api/?name=#{current_user.first_name}+#{current_user.last_name}", height: 90, width: 90, crop: :fill, class: "rounded-circle" %>
+                <%= image_tag "https://eu.ui-avatars.com/api//?name=#{current_user.first_name}+#{current_user.last_name}&background=06C4BE&color=00586B", height: 90, width: 90, crop: :fill, class: "rounded-circle" %>
               <% end %>
             <% end %>
       </div>
