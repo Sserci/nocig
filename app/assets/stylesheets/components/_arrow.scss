@@ -1,0 +1,22 @@
+.arrow-objective {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+align-items: center;
+p{
+padding-top: 10px;
+color: $custom-blue-black;
+font-size: 18px;
+}
+img {
+  width: 260px;
+}
+}
+
+#start-j{
+  padding-right: 10px;
+}
+
+#end-j{
+  padding-left: 10px;
+}
