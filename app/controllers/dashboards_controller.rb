@@ -12,4 +12,7 @@ class DashboardsController < ApplicationController
   def dashboard
     @time = Time.new
   end
+
+  def date
+  end
 end

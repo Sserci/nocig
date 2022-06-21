@@ -5,6 +5,9 @@
         <%= link_to dashboard_path, id: "icone-arrow" do %>
               <i class="iconify" data-icon="akar-icons:arrow-left"></i>
             <% end %>
+        <%= link_to destroy_user_session_path, method: :delete, id: "icone-arrow" do %>
+              <span class="iconify" data-icon="bx:log-out-circle" data-rotate="180deg"></span>
+            <% end %>
       </div>
 
 
@@ -17,13 +20,19 @@
 
         <div class="profile-card-info">
           <div class ="icone-profile">
-            <%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill %>
+            <%= link_to avatar_path, id: "icone-arrow" do %>
+              <% if current_user.photo.attached? %>
+                <%= cl_image_tag current_user.photo.key, height: 70, width: 70, crop: :fill, class: "rounded-circle" %>
+              <% else %>
+                <%= image_tag "https://eu.ui-avatars.com/api//?name=#{current_user.first_name}+#{current_user.last_name}&background=06C4BE&color=00586B", height: 70, width: 70, crop: :fill, class: "rounded-circle" %>
+              <% end %>
+            <% end %>
           </div>
           <%# <h2>Edit <%= resource_name.to_s.humanize %></h2>
           <div class="user-name-verified">
             <div class="user-name">
-              <%= current_user.first_name %>
-              <%= current_user.last_name %>
+              <%= current_user.first_name.capitalize %>
+              <%= current_user.last_name.capitalize %>
             </div>
             <div id="nocig-member">
               <p>Membre NoCig vérifié</p>
@@ -60,12 +69,12 @@
         </div>
 
         <div class="btn btn-grey-info" <% link_to profile_info_path%>>
-          <%= link_to 'Informations personelles', profile_info_path, class:"profile-redirect-info-color"%>
+          <%= link_to 'Informations personnelles', profile_info_path, class:"profile-redirect-info-color"%>
           <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
         </div>
 
         <div class="btn btn-grey-info" <% recover_my_pot_path%>>
-          <%= link_to 'Retirez le montant de ma cagnotte', recover_my_pot_path, class:"profile-redirect-info-color"%>
+          <%= link_to 'Retirer le montant de ma cagnotte', recover_my_pot_path, class:"profile-redirect-info-color"%>
           <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
         </div>
 
