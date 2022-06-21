@@ -1,0 +1,23 @@
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="header-modal">
+        <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="body-modal">
+        <p class="modal-text">Confirmez-vous un prélèvement hebdomadaire de XXX € de votre compte bancaire ?</p>
+        <br>
+      </div>
+      <div class="body-modal">
+        <p class="modal-text">Vous pouvez modifier ou annuler vos prélèvements à tout moment </p>
+      </div>
+      <div class="footer-modal">
+        <%= form_with url: profile_bank_path, method: :patch do |f| %>
+        <%= f.submit "Valider", class:"green-btn" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
