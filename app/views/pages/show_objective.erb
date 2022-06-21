@@ -6,7 +6,7 @@
     <img src="/assets/arrow" alt="">
   </div>
   <p class="budget"> <%= current_user.objective_amount %>€</p>
-  <p class="result-sentence">Dans <%= current_user.objective_duration%> jours, tu auras économisé <%= current_user.objective_amount%>€ en<br>évitant d'acheter <%= current_user.objective_amount / 10 %> paquets soit <%= current_user.objective_amount / 10 * 20 %> cigarettes</p>
+  <p class="result-sentence">Dans <%= current_user.objective_duration%> jours, tu auras économisé <%= current_user.objective_amount%>€ en<br>évitant d'acheter <%= current_user.objective_number_of_packs %> paquets soit <%= current_user.objective_number_of_packs * 20 %> cigarettes</p>
 </div>
 
 

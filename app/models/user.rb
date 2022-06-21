@@ -92,6 +92,10 @@ class User < ApplicationRecord
     total_packs_number.sum
   end
 
+  def objective_number_of_packs
+    (self.objective_amount / self.cigarette_price).round
+  end
+
   def total_packs_number
     total_packs_number = []
     self.transactions.each do |transaction|
