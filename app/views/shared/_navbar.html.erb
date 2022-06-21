@@ -1,38 +1,48 @@
 <div class="navbar">
 
+  <%= link_to dashboard_path do %>
   <div class="menu">
     <span class="iconify
     <%= 'active' if current_page?(dashboard_path) %>"
      data-icon="ant-design:home-outlined">
      </span>
-    <p><%= link_to "Home", dashboard_path, class: "text-decoration-none" %></p>
+    <p>Home</p>
   </div>
+  <% end %>
 
+  <%= link_to dashboard_health_path do %>
   <div class="menu">
     <span class="iconify
     <%= 'active' if current_page?(dashboard_health_path) %>"
     data-icon="ant-design:heart-filled"></span>
-    <p><%= link_to "Santé", dashboard_health_path, class: "text-decoration-none" %></p>
+    <p>Santé</p>
   </div>
+  <% end %>
 
+  <%= link_to dashboard_pot_path do %>
   <div class="menu">
     <span class="iconify
     <%= 'active' if current_page?(dashboard_pot_path) %>"
     data-icon="clarity:piggy-bank-solid" data-flip="horizontal"></span>
-    <p><%= link_to "Cagnotte", dashboard_pot_path, class: "text-decoration-none" %></p>
+    <p>Cagnotte</p>
   </div>
+  <% end %>
 
+  <%= link_to dashboard_motivation_path do %>
   <div class="menu">
     <span class="iconify
     <%= 'active' if current_page?(dashboard_motivation_path) %>"
-    data-icon="twemoji:flexed-biceps"></span>
-    <p><%= link_to "Motivation", dashboard_motivation_path, class: "text-decoration-none" %></p>
+    data-icon="emojione-monotone:flexed-biceps"></span>
+    <p>Motivation</p>
   </div>
+  <% end %>
 
+  <%= link_to profile_home_path do %>
   <div class="menu">
     <span class="iconify
     <%= 'active' if current_page?(profile_home_path) %>"
     data-icon="carbon:user-avatar"></span>
-    <p><%= link_to "Profil", profile_home_path, class: "text-decoration-none" %></p>
+    <p>Profil</p>
   </div>
 </div>
+<% end %>
