@@ -29,14 +29,24 @@
       </div>
     </div>
   </div>
-
+  <!-- Modals -->
+  <%= render "shared/modal_iban" %>
   <div class="cards">
-    <div class="card-dashboard">
-      <div class="icon-bg">
-        <span class="iconify" data-icon="arcticons:money-manager"></span>
+    <% if !current_user.iban.nil? %>
+      <%= link_to dashboard_pot_path, class: 'card-dashboard text-decoration-none' do %>
+          <div class="icon-bg">
+            <span class="iconify" data-icon="arcticons:money-manager"></span>
+          </div>
+          <p class="text-decoration-none">Ma cagnotte</p>
+      <% end %>
+    <% else %>
+      <div class="card-dashboard" data-toggle="modal" data-target="#exampleModalCenter">
+        <div class="icon-bg">
+          <span class="iconify" data-icon="arcticons:money-manager"></span>
+        </div>
+        <p class="text-decoration-none">Ma cagnotte</p>
       </div>
-      <p> <%= link_to "Ma cagnotte", dashboard_pot_path, class: "text-decoration-none"%></p>
-    </div>
+      <% end %>
 
     <div class="card-dashboard">
       <div class="icon-bg">
@@ -58,4 +68,5 @@
       </div>
       <p><%= link_to "Renseigner ma conso", new_transaction_path, class: "text-decoration-none"%></p>
     </div>
+
   </div>
