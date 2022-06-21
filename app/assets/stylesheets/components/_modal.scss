@@ -1,0 +1,31 @@
+
+.header-modal {
+  display: flex;
+  justify-content: end;
+}
+.close-modal {
+  margin: 5px;
+}
+.body-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.modal-text {
+  width: 246px;
+  text-align: center;
+  font-size: 18px;
+  color: $custom-blue-black
+}
+.footer-modal {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 90px;
+}
+.modal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
