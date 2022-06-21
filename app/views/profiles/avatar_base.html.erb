@@ -1,0 +1,36 @@
+<div class="container">
+
+      <div class="back-arrow">
+        <%= link_to profile_home_path, id: "icone-arrow" do %>
+              <i class="iconify" data-icon="akar-icons:arrow-left"></i>
+            <% end %>
+      </div>
+
+      <div class="profile-info">
+        <h1>Modifier ma photo de profil</h1>
+        <div class ="icone-profile">
+            <span class="iconify" data-icon="carbon:user-avatar"></span>
+        </div>
+      </div>
+
+
+
+
+
+
+
+        <div class="form-input-with">
+          <%= form_with url: update_avatar_path, method: :patch do |f| %>
+            <%= f.file_field :photo %>
+            <div class="form-action-with">
+              <%= f.submit "Valider", class:"green-btn" %>
+            </div>
+          <% end %>
+        </div>
+
+
+
+
+    <%# <div>
+      <p>Pas satisfait? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+</div>
