@@ -4,13 +4,13 @@
       <%= link_to ('<span class="iconify" data-icon="carbon:user-avatar"></span>').html_safe, profile_home_path, class: 'text-decoration-none' %>
       <p><%=@time.strftime("%d/%m/%Y") %></p>
       <%# <%= @time.strftime("%d of %B, %Y") %>
-      <p><strong>Bravo !</strong> plus que <strong id="day">39</strong> jours avant votre <strong><%= current_user.objective_title %></strong> </p>
+      <p><strong>Bravo !</strong> plus que <strong id="day"> <%= current_user.objective_duration %></strong> jours avant votre <strong><%= current_user.objective_title %></strong> </p>
     </div>
   </div>
 
   <div class="card-recap">
     <h2>Objectif</h2>
-    <p id="days-left">J-39</p>
+    <p id="days-left">J-<%= current_user.objective_duration %></p>
 
     <div class="pot-growth">
 
