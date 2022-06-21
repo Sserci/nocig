@@ -1,5 +1,4 @@
 <div class="container">
-
     <div class="back-arrow">
       <%= link_to 'Back', onclick: "window.history.back();", id: "icone-arrow" do %>
         <i class="iconify" data-icon="akar-icons:arrow-left"></i>
@@ -15,7 +14,7 @@
     </div>
 
     <div class ="icone-profile" style="text-align: center;">
-       <span class="iconify" data-icon="carbon:user-avatar"></span>
+      <span class="iconify" data-icon="carbon:user-avatar"></span>
     </div>
 
     <div class="btn-apple">
@@ -35,7 +34,11 @@
 
     <div class="btn-mail">
       <span class="iconify" data-icon="carbon:email" style="color: white;"></span>
-      <p> Continuer avec mon email</p>
+      <% if params[:discover] == "true" %>
+        <%= link_to 'Continuer avec mon email', new_user_registration_path, class:"continue-with-email" %>
+        <% elsif params[:discover] == nil %>
+      <%= link_to 'Continuer avec mon email', new_user_session_path, class:"continue-with-email" %>
+    <% end %>
     </div>
 
 </div>

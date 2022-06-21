@@ -79,6 +79,5 @@ class PagesController < ApplicationController
   end
 
   def show_objective
-    @consumption = Consumption.find_by(user_id: current_user.id)
   end
 end

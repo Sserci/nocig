@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
-  root to: 'pages#home'
+  authenticated :user do
+    root to: "dashboards#dashboard", as: "authenticated_root"
+  end
+  unauthenticated :user do
+    root to: "pages#home"
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :consumptions, only: [:new, :create] do
     resources :cigarettes, only: [:create]
@@ -29,4 +34,7 @@ Rails.application.routes.draw do
   # new_consumption GET    /consumptions/new(.:format) consumptions#new
   get '/get_my_pot', to: 'profiles#recover_my_pot', as: 'recover_my_pot'
   patch '/get_my_pot', to: 'profiles#withdraw', as: 'withdraw'
+  get '/profile/edit/avatar', to: 'profiles#avatar_base', as: 'avatar'
+  patch '/profile/edit/avatar', to: 'profiles#avatar', as: 'update_avatar'
+
 end

@@ -1,16 +1,24 @@
   <div class="header-dashboard">
     <div class="header-dashboard-info">
       <h2> <%= current_user.first_name %></h2>
-      <%= link_to ('<span class="iconify" data-icon="carbon:user-avatar"></span>').html_safe, profile_home_path, class: 'text-decoration-none' %>
+      <div class ="icone-profile-dash">
+            <%= link_to profile_home_path, id: "icone-arrow" do %>
+              <% if current_user.photo.attached? %>
+                <%= cl_image_tag current_user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle" %>
+              <% else %>
+                <%= image_tag "https://eu.ui-avatars.com/api/?name=#{current_user.first_name}+#{current_user.last_name}", height: 400, width: 400, crop: :fill, class: "avatar-large" %>
+              <% end %>
+            <% end %>
+      </div>
       <p><%=@time.strftime("%d/%m/%Y") %></p>
       <%# <%= @time.strftime("%d of %B, %Y") %>
-      <p><strong>Bravo !</strong> plus que <strong id="day">39</strong> jours avant votre <strong><%= current_user.objective_title %></strong> </p>
+      <p><strong>Bravo !</strong> plus que <strong id="day"> <%= current_user.objective_duration %></strong> jours avant votre <strong><%= current_user.objective_title %></strong> </p>
     </div>
   </div>
 
   <div class="card-recap">
     <h2>Objectif</h2>
-    <p id="days-left">J-39</p>
+    <p id="days-left">J-<%= current_user.objective_duration %></p>
 
     <div class="pot-growth">
 

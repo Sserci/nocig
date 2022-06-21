@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :consumptions
   has_many :transactions
+  has_one_attached :photo
   validate :presence_age, :presence_gender, :presence_objective_amount, :presence_pot, :presence_iban
   validates :email, :first_name, :last_name, presence: true
   # validates :iban, format: { with: /FR\d{12}[A-Z0-9]{11}\d{2}/ }
@@ -49,10 +50,32 @@ class User < ApplicationRecord
   end
 
   def presence_pot
-    if pot?
-      if !pot.is_a?(Integer) || pot < 1
-        errors.add(:pot, "should be an integer superior than 10")
-      end
+    if pot? && (!pot.is_a?(Integer) || pot < 1)
+      errors.add(:pot, "should be an integer superior than 10")
     end
+  end
+
+  def initial_consumption
+    Consumption.find_by(user: self)
+  end
+
+  def cigarette_price
+    self.initial_consumption.cigarette.price
+  end
+
+  def last_transaction
+    self.transactions.order(created_at: :desc).first
+  end
+
+  def weekly_economy
+    self.last_transaction ? self.last_transaction.amount : self.initial_consumption.quantity * self.cigarette_price
+  end
+
+  def daily_economy
+    self.weekly_economy * 7
+  end
+
+  def objective_duration
+    self.objective_amount / self.daily_economy
   end
 end
