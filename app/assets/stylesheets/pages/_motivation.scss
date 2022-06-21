@@ -13,7 +13,6 @@
 }
 
 .cards-motivation {
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -23,7 +22,8 @@
   margin: 20px;
   padding: 20px;
   width: 500px;
-  min-height: 200px;
+  height: 100px;
+  min-height: 100px;
   display: grid;
   grid-template-rows: 20px 50px 1fr 50px;
   border-radius: 10px;
@@ -31,21 +31,44 @@
   transition: all 0.2s;
 }
 
-.card-motivation {
-
-}
-
 .card__apply {
-  grid-row: 4/5;
+  padding-top: 40px;
+  padding-left: 200px;
   align-self: center;
 }
 
-.card__title {
-  grid-row: 3/4;
-  font-weight: 400;
-  color: #ffffff;
+.card-4 {
+  background: radial-gradient($custom-green-button, #58d5c9);
 }
 
-.card-4 {
-  background: radial-gradient(#60efbc, #58d5c9);
+.card__title{
+  font-size: 20px;
+  color :white
+}
+
+.iconify-biceps {
+  height: 120px;
+  padding: 20px;
+  width: 100%;
+}
+
+.text-article {
+ color : $custom-blue-black;
+ text-align: center;
+ padding: 10px;
+ margin: 0 auto;
+}
+
+.card-5 {
+  padding-bottom: 20px;
+  background: radial-gradient($custom-green-button, #58d5c9);
+}
+
+.iconify-citation {
+  color: white;
+  width: 40px;
+  height: 40px;
+  grid-column: 3;
+  grid-row: 2;
+  margin-left: 20px;
 }
