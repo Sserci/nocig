@@ -15,10 +15,6 @@ class PagesController < ApplicationController
     @result = []
     @simulation = Consumption.find(session[:consumption]["id"])
     @superior_to_1000 = [{
-                       background: "assets/thailande",
-                       title: "Voyage en Thailande",
-                       budget: 1500
-                     }, {
                           background: "assets/vespa",
                           title: "Un nouveau scooter",
                           budget: 4000

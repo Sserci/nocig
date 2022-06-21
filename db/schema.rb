@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_20_163754) do
+ActiveRecord::Schema.define(version: 2022_06_21_140901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,7 +93,7 @@ ActiveRecord::Schema.define(version: 2022_06_20_163754) do
     t.string "gender"
     t.string "iban"
     t.string "bank_name"
-    t.integer "pot"
+    t.integer "pot", default: 0
     t.string "objective_title"
     t.integer "objective_amount"
     t.string "objective_category"
