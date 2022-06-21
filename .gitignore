@@ -42,4 +42,5 @@ yarn-debug.log*
 
 # Ignore .idea folder
 /.idea
-.idea
+.idea.env*
+.env*

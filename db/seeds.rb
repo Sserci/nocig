@@ -5,9 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Transaction.destroy_all
 Consumption.destroy_all
 Cigarette.destroy_all
 User.destroy_all
+
 
 benson = Cigarette.create(brand: "Benson & Hedges blue", price: 10)
 Cigarette.create(brand: "Camel Black", price: 10)
@@ -33,3 +35,7 @@ Cigarette.create(brand: "Winston Blue", price: 10)
 user1 = User.create(email: "gb@gmail.com", password: 123456, first_name: "greg", last_name: "bert")
 
 Consumption.create(quantity: 4, cigarette: benson, user: user1, date: Date.today)
+
+t1 = Transaction.create!(date: "2022-06-07", amount: 30, packs_number: 3, user: user1)
+t2 = Transaction.create(date: "2022-06-12", amount: 20, packs_number: 2, user: user1)
+t3 = Transaction.create(date: "2022-06-17", amount: 10, packs_number: 1, user: user1)

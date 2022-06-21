@@ -22,4 +22,16 @@ class ProfilesController < ApplicationController
 
   def withdraw
   end
+
+  def avatar_base
+  end
+
+  def avatar
+    current_user.photo = params[:photo]
+    if current_user.save
+      redirect_to profile_home_path
+    else
+      render :edit_avatar
+    end
+  end
 end

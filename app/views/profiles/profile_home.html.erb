@@ -17,7 +17,7 @@
 
         <div class="profile-card-info">
           <div class ="icone-profile">
-            <span class="iconify" data-icon="carbon:user-avatar"></span>
+            <%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill %>
           </div>
           <%# <h2>Edit <%= resource_name.to_s.humanize %></h2>
           <div class="user-name-verified">

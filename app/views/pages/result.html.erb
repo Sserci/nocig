@@ -20,6 +20,6 @@
     <p>Coût sur 30 ans: <%= (@cost * 30).round %>€</p>
   </div>
   <div class="button-container-result">
-    <%= link_to("Commencer à cagnotter", login_path, class: "btn-begin-pot") %>
+    <%= link_to("Commencer à cagnotter", login_path(discover: true), class: "btn-begin-pot", ) %>
   </div>
 </div>
