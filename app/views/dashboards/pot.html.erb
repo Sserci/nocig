@@ -2,13 +2,13 @@
   <div class= "pot-header">
     <div class="user-info">
      <div class ="icone-profile-dash">
-            <%= link_to profile_home_path, id: "icone-arrow" do %>
-              <% if current_user.photo.attached? %>
-                <%= cl_image_tag current_user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle" %>
-              <% else %>
-                <%= image_tag "https://eu.ui-avatars.com/api//?name=#{current_user.first_name}+#{current_user.last_name}&background=06C4BE&color=00586B", height: 90, width: 90, crop: :fill, class: "rounded-circle" %>
-              <% end %>
-            <% end %>
+        <%= link_to profile_home_path, id: "icone-arrow" do %>
+          <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle" %>
+          <% else %>
+            <%= image_tag "https://eu.ui-avatars.com/api//?name=#{current_user.first_name}+#{current_user.last_name}&background=06C4BE&color=00586B", height: 90, width: 90, crop: :fill, class: "rounded-circle" %>
+          <% end %>
+        <% end %>
       </div>
         <h2><%= current_user.first_name %><h2>
     </div>
@@ -18,7 +18,6 @@
         <%= image_tag "emojione-monotone_money-with-wings.png" %>
       <% end %>
     </div>
-
   </div>
 
   <div class="pot-card">

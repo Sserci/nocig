@@ -10,7 +10,7 @@
   <p class="conso-asking">Quelle est votre consommation cette semaine?</p>
 
  <div class="container-simulation-form">
-  <%= simple_form_for(@transaction) do |f| %>
+    <%= simple_form_for(@transaction) do |f| %>
     <%= f.error_notification %>
     <div class="form-inputs">
       <%= f.input :packs_number,
@@ -21,7 +21,7 @@
     </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Eh oui...", class: "green-btn" %>
+        <%= f.button :submit, "Enregistrer ma conso", class: "green-btn" %>
       </div>
     <% end %>
   </div>
