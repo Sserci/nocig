@@ -12,4 +12,16 @@
   a {
     color: white;
   }
- }
+  #icone-arrow {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  h2 {
+    margin-left: 4px;
+  }
+}

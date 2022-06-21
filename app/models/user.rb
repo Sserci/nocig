@@ -83,14 +83,14 @@ class User < ApplicationRecord
     @usage_days = (Date.today.to_date - self.created_at.to_date).to_i
   end
 
-  def total_packs_number
-    @transaction = Transaction.where(user: current_user)
-    total_packs_number = []
-    @transaction.each do |transaction|
-      total_packs_number << transaction.packs_number
-    end
-    total_packs_number.sum
-  end
+  # def total_packs_number
+  #   @transaction = Transaction.where(user: current_user)
+  #   total_packs_number = []
+  #   @transaction.each do |transaction|
+  #     total_packs_number << transaction.packs_number
+  #   end
+  #   total_packs_number.sum
+  # end
 
   def objective_number_of_packs
     (self.objective_amount / self.cigarette_price).round
@@ -98,8 +98,10 @@ class User < ApplicationRecord
 
   def total_packs_number
     total_packs_number = []
+    consumption = Consumption.find_by(user: self)
     self.transactions.each do |transaction|
-      total_packs_number << transaction.packs_number
+
+      total_packs_number << consumption.quantity - transaction.packs_number
     end
     total_packs_number.sum
   end
