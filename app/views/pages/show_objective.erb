@@ -3,10 +3,12 @@
   <p class="result-sentence">Un peu de volonté pour un projet<br>qui te tient à coeur :</p>
   <h2 class="result-title"> <%= current_user.objective_title %></h2>
   <div class="arrow-objective">
-    <img src="/assets/arrow" alt="">
+    <p id="start-j"><strong>J-1</strong></p>
+    <img src="/assets/arrow-j" alt="">
+    <p id="end-j"><strong>J-<%= current_user.objective_duration %></strong></p>
   </div>
   <p class="budget"> <%= current_user.objective_amount %>€</p>
-  <p class="result-sentence">Dans <%= current_user.objective_duration%> jours, tu auras économisé <%= current_user.objective_amount%>€ en<br>évitant d'acheter <%= current_user.objective_amount / 10 %> paquets soit <%= current_user.objective_amount / 10 * 20 %> cigarettes</p>
+  <p class="result-sentence">Dans <%= current_user.objective_duration%> jours, tu auras économisé <%= current_user.objective_amount%>€ en<br>évitant d'acheter <%= current_user.objective_number_of_packs %> paquets soit <%= current_user.objective_number_of_packs * 20 %> cigarettes</p>
 </div>
 
 
