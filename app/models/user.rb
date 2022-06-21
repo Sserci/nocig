@@ -68,11 +68,11 @@ class User < ApplicationRecord
   end
 
   def weekly_economy
-    self.last_transaction ? self.last_transaction.amount : self.initial_consumption.quantity * self.cigarette_price
+    self.last_transaction ? self.last_transaction.amount : (self.initial_consumption.quantity * self.cigarette_price)
   end
 
   def daily_economy
-    self.weekly_economy * 7
+    (self.weekly_economy / 7)
   end
 
   def objective_duration
