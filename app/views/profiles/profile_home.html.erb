@@ -5,6 +5,9 @@
         <%= link_to dashboard_path, id: "icone-arrow" do %>
               <i class="iconify" data-icon="akar-icons:arrow-left"></i>
             <% end %>
+        <%= link_to destroy_user_session_path, method: :delete, id: "icone-arrow" do %>
+              <span class="iconify" data-icon="bx:log-out-circle" data-rotate="180deg"></span>
+            <% end %>
       </div>
 
 
@@ -21,7 +24,7 @@
               <% if current_user.photo.attached? %>
                 <%= cl_image_tag current_user.photo.key, height: 70, width: 70, crop: :fill, class: "rounded-circle" %>
               <% else %>
-                <%= image_tag "https://eu.ui-avatars.com/api/?name=#{current_user.first_name}+#{current_user.last_name}", height: 70, width: 70, crop: :fill, class: "rounded-circle" %>
+                <%= image_tag "https://eu.ui-avatars.com/api//?name=#{current_user.first_name}+#{current_user.last_name}&background=06C4BE&color=00586B", height: 70, width: 70, crop: :fill, class: "rounded-circle" %>
               <% end %>
             <% end %>
           </div>
