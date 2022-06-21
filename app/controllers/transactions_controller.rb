@@ -16,18 +16,6 @@ class TransactionsController < ApplicationController
     @transaction.save
   end
 
-  def total_packs_number
-    @transaction = Transaction.where(user: current_user)
-    total_packs_number = []
-    @transaction.each do |transaction|
-      total_packs_number << transaction.packs_number
-    end
-    sum = 0
-    sum += total_packs_number
-
-  end
-
-
   private
 
   def transaction_params
