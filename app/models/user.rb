@@ -76,6 +76,6 @@ class User < ApplicationRecord
   end
 
   def objective_duration
-    self.objective_amount / self.daily_economy
+    (self.objective_amount / self.daily_economy).round
   end
 end
