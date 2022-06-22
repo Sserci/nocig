@@ -9,6 +9,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import {typeReveal} from "../plugins/404";
 
 Rails.start()
 Turbolinks.start()
@@ -16,3 +17,6 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+document.addEventListener("turbolinks:load", event => {
+  typeReveal()
+})
