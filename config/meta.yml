@@ -1,0 +1,5 @@
+meta_product_name: "NoCig"
+meta_title: "NoCig - The app that turn your cigarettes into money"
+meta_description: "NoCig est une appplication qui à pour vocation d'accompagner les fumeurs dans leur volonté d'arrêter la cigarette. Grâce à NoCig, on peut maintenant se rendre compte de nos dépenses liée à la cigarette et les convertir dans un projet qui nous tient à coeur"
+meta_image: "Logo.png" # should exist in `app/assets/images/`
+  # required for Twitter Cards
