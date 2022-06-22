@@ -19,6 +19,14 @@
 }
 .header-pink {
   height: 170px;
+  border-radius: 0 0 50px 50px;
+  background-color: $custom-pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-pink-motivation {
+  height: 150px;
   width: 100%;
   border-radius: 0 0 50px 50px;
   background-color: #FFEEFB;
@@ -27,6 +35,7 @@
   align-items: center;
   position: fixed;
 }
+
 .consommation-title {
   font-weight: bold;
 }
