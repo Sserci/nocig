@@ -1,7 +1,7 @@
 // Card principal
 
 .card-recap{
-  margin: 40px;
+  margin: 0 40px 40px 40px;
   box-shadow: 2px 2px 2px lightgray;
   border: lightgray 1px solid;
   text-align: center;
@@ -49,10 +49,10 @@
 
 .cards{
     display: grid;
-    margin: -21px 63px 36px 63px;
+    margin: -21px 63px 80px 63px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 24px 24px;
+    gap: 24px;
     a{
       color: black;
     }
@@ -63,7 +63,7 @@
   border: lightgray 1px solid;
   border-radius: 12px;
   width: 120px;
-  height: 130px;
+  height: 125px;
   text-decoration: none;
   p{
     padding: 85px 10px 10px 10px;
