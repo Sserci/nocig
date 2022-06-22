@@ -35,7 +35,7 @@
         <br>
             <div class="form-action-with">
               <button class="green-btn submit-iban">Valider</button>
-              <%= render "shared/modal_confirmation", f: f %>
+              <%= render "shared/modal_confirmation", f: f, consumption: @consumption %>
           <% end %>
           </div>
                         <% if current_user.errors[:iban].any? %>
