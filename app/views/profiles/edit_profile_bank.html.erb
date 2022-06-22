@@ -22,17 +22,21 @@
         <div class="form-input-with">
           <%= form_with url: profile_bank_path, method: :patch do |f| %>
             <%= f.label :query, "Nom de votre banque:" %>
-          <div class="form-with-control">
+          <div class="form-with-control-empty">
             <%= f.text_field :bank_name %>
           </div>
             <%= f.label :query, "Votre IBAN:" %>
-          <div class="form-with-control">
-            <%= f.text_field :iban, required: 'required' %>
+          <div class="form-with-control-empty">
+            <%= f.text_field :insert_iban, required: 'required'%>
+          </div>
+
+        <br>
+        <br>
+        <br>
             <div class="form-action-with">
               <button class="green-btn submit-iban">Valider</button>
               <%= render "shared/modal_confirmation", f: f, consumption: @consumption %>
           <% end %>
-        </div>
           </div>
                         <% if current_user.errors[:iban].any? %>
                           <% current_user.errors[:iban].each do %>
@@ -40,9 +44,7 @@
                           <% end %>
                         <% end %>
         </div>
-        <br>
-        <br>
-        <br>
+
 
       </div>
 

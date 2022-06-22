@@ -13,11 +13,11 @@
     <div class="form-input-with">
       <%= form_with url: create_objective_path, method: :post do |f| %>
         <%= f.label :query, "Quel est votre objectif :" %>
-      <div class="form-with-control">
+      <div class="form-with-control-empty">
         <%= f.text_field :objective_title %>
       </div>
         <%= f.label :query, "Quel est le budget de votre objectif :" %>
-      <div class="form-with-control">
+      <div class="form-with-control-empty">
         <%= f.text_field :objective_amount, required: 'required' %>
       </div>
     </div>

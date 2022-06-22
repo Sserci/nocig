@@ -1,12 +1,12 @@
-<div class="container" style="width: 100vw;">
+<div class="container-header">
   <div class= "pot-header">
     <div class="user-info">
      <div class ="icone-profile-dash">
         <%= link_to profile_home_path, id: "icone-arrow" do %>
           <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle" %>
+            <%= cl_image_tag current_user.photo.key, height: 60, width: 60, crop: :fill, class: "rounded-circle" %>
           <% else %>
-            <%= image_tag "https://eu.ui-avatars.com/api//?name=#{current_user.first_name}+#{current_user.last_name}&background=06C4BE&color=00586B", height: 90, width: 90, crop: :fill, class: "rounded-circle" %>
+            <%= image_tag "https://eu.ui-avatars.com/api//?name=#{current_user.first_name}+#{current_user.last_name}&background=06C4BE&color=00586B", height: 60, width: 60, crop: :fill, class: "rounded-circle" %>
           <% end %>
         <% end %>
       </div>
@@ -32,7 +32,8 @@
       <h2><strong><%= current_user.pot%>€</strong><p>collectés sur<p><strong><%= current_user.objective_amount %>€</strong></h2>
     </div>
   </div>
-
+</div>
+<div class="container">
   <div class="savings-card">
     <h2>Mes économies <%= image_tag "lucide_cigarette-off.png", class: "cigarette" %><h2>
     <div class="wrapper">
