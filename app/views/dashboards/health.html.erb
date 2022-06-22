@@ -1,8 +1,273 @@
-<div class="header-health">
-  <span class="iconify" data-icon="carbon:user-avatar"></span>
-  <p>Mon suivi</p>
-</div>
+<div class="header-dashboard">
+    <div class="header-dashboard-info">
+      <div class ="icone-profile-dash">
+            <%= link_to profile_home_path, id: "icone-arrow" do %>
+              <% if current_user.photo.attached? %>
+                <%= cl_image_tag current_user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle" %>
+              <% else %>
+                <%= image_tag "https://eu.ui-avatars.com/api//?name=#{current_user.first_name}+#{current_user.last_name}&background=06C4BE&color=00586B", height: 90, width: 90, crop: :fill, class: "rounded-circle" %>
+              <% end %>
+            <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="pot-card">
+    <h1>Mon suivi</h1>
+  </div>
 
 <div class="plant">
-  <%= image_tag "fleur.png" %>
+  <div id="10ans">
+    <!-- Button trigger modal -->
+    <%= image_tag "slice_11.png",  data: { target: "#exampleModalScrollable11", toggle: "modal" } %>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable11" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollable11Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollable11Title">10 ans</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>Peu à peu, votre espérance de vie se rapproche de celle des personnes n’ayant jamais fumé.</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="5ans">
+    <!-- Button trigger modal -->
+    <%= image_tag "slice_10.png",  data: { target: "#exampleModalScrollable10", toggle: "modal" } %>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable10" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollable10Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollable10Title">5 ans</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>Vos risques de cancer de la bouche, du poumon, de la vessie ont bien diminué.</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+ </div>
+
+  <div id="1an">
+    <!-- Button trigger modal -->
+    <%= image_tag "slice_9.png",  data: { target: "#exampleModalScrollable9", toggle: "modal" } %>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable9" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollable9Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollable9Title">1 an</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>Votre risque d’accident vasculaire cérébral redevient équivalent à celui d’une personne n’ayant jamais fumé. Votre risque d’infarctus du myocarde diminue de moitié.</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+ </div>
+
+  <div id="90jours">
+    <!-- Button trigger modal -->
+    <%= image_tag "slice_8.png",  data: { target: "#exampleModalScrollable8", toggle: "modal" } %>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable8" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollable8Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollable8Title">J-90</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>Vous toussez moins, vous avez plus d’énergie.</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+ </div>
+
+  <div id="60jours">
+    <!-- Button trigger modal -->
+    <%= image_tag "slice_7.png",  data: { target: "#exampleModalScrollable7", toggle: "modal" } %>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable7" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollable7Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollable7Title">J-60</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>Votre peau est plus belle et vous avez meilleure mine.</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+ </div>
+
+  <div id="30jours">
+    <!-- Button trigger modal -->
+    <%= image_tag "slice_6.png",  data: { target: "#exampleModalScrollable6", toggle: "modal" } %>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable6" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollable6Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollable6Title">J-30</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>La voix est plus claire.</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+ </div>
+
+  <div id="14jours">
+    <!-- Button trigger modal -->
+    <%= image_tag "slice_5.png",  data: { target: "#exampleModalScrollable5", toggle: "modal" } %>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable5" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollable5Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollable5Title">J-14</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>Le sommeil s'améliore.</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+ </div>
+
+  <div id="7jours">
+    <!-- Button trigger modal -->
+    <%= image_tag "slice_4.png",  data: { target: "#exampleModalScrollable4", toggle: "modal" } %>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable4" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollable4Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollable4Title">J-7</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>Vous retrouvez peu à peu votre goût et votre odorat.</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+ </div>
+
+  <div id="3jours">
+    <!-- Button trigger modal -->
+    <%= image_tag "slice_3.png",  data: { target: "#exampleModalScrollable3", toggle: "modal" } %>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable3" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollable3Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollable3Title">J-3</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>L'essoufflement est moins important.</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+ </div>
+
+  <div id="2jours">
+    <!-- Button trigger modal -->
+    <%= image_tag "slice_2.png",  data: { target: "#exampleModalScrollable2", toggle: "modal" } %>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollable2Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollable2Title">J-2</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>La respiration s'améliore.</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+ </div>
+
+  <div id="1jour">
+    <!-- Button trigger modal -->
+    <%= image_tag "slice_1.png",  data: { target: "#exampleModalScrollable1", toggle: "modal" } %>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollable1Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollable1Title">J-1</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>Votre taux de monoxyde de carbone dans le sang diminue. Dès 8 heures d’arrêt, il est divisé par deux et vous êtes mieux oxygéné.</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+ </div>
+
 </div>
