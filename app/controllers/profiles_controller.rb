@@ -6,6 +6,7 @@ class ProfilesController < ApplicationController
   end
 
   def edit_profile_bank
+    @consumption = Consumption.find_by(user: current_user)
   end
 
   def update_profile_bank

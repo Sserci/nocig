@@ -30,7 +30,7 @@
             <%= f.text_field :iban, required: 'required' %>
             <div class="form-action-with">
               <button class="green-btn submit-iban">Valider</button>
-              <%= render "shared/modal_confirmation", f: f %>
+              <%= render "shared/modal_confirmation", f: f, consumption: @consumption %>
           <% end %>
         </div>
           </div>
