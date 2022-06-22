@@ -1,0 +1,39 @@
+<div class="conso-container">
+
+  <div class="header-pink-motivation">
+    <div class="back-arrow">
+      <%= link_to 'Back', onclick: "window.history.back();", id: "icone-arrow" do %>
+        <i class="iconify" data-icon="akar-icons:arrow-left"></i>
+      <% end %>
+    </div>
+    <h1 id="get-pot-title">Retirer l'argent de ma cagnotte</h1>
+  </div>
+
+  <div class="container">
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <i class="iconify iconify-moneyy" data-icon="emojione-monotone:money-with-wings"></i>
+
+    <div id="text-get-pot"><h4>Vous avez </h4></div>
+
+
+    <div class= "cards-motivation">
+        <div class="card-pot">
+            <h2 class="card__title-pot"><%= current_user.pot %>€</h2>
+        </div>
+        <br>
+    <div id="text-get-pott"><h4>Disponible sur votre cagnotte</h4></div>
+    <br>
+    <br>
+    <br>
+    <br><br><br>
+    <br>
+    <p class="green-btn" style="text-align:center; padding-top: 5px;">BANKO</button>
+  </div>
+</div>
