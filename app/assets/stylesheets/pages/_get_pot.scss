@@ -1,0 +1,53 @@
+#get-pot-title{
+    padding: 50px;
+    margin-right: 50px;
+    margin-left: -10;
+    margin-bottom: 0px;
+  }
+
+.iconify-moneyy {
+  height: 180px;
+  padding: 20px;
+  width: 100%;
+  color: $custom-green-button;
+}
+
+#text-get-pot {
+  color : $custom-blue-black;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  h4{
+    font-size: 25px;
+  }
+}
+
+#text-get-pott {
+  color : $custom-blue-black;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  h4{
+    font-size: 20px;
+  }
+}
+
+.card-pot{
+  background: radial-gradient($custom-green-button, #58d5c9);
+  margin: 0 20px;
+  padding: 15px;
+  width: 500px;
+  height: 100px;
+  min-height: 100px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.card__title-pot{
+  font-size: 60px;
+  color :white;
+  text-align: center;
+}
