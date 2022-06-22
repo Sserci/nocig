@@ -45,36 +45,35 @@
           <div class="icon-bg">
             <span class="iconify" data-icon="arcticons:money-manager"></span>
           </div>
-          <p class="text-decoration-none">Ma cagnotte</p>
+          <p>Ma cagnotte</p>
       <% end %>
     <% else %>
       <div class="card-dashboard" data-toggle="modal" data-target="#exampleModalCenter">
         <div class="icon-bg">
           <span class="iconify" data-icon="arcticons:money-manager"></span>
         </div>
-        <p class="text-decoration-none">Ma cagnotte</p>
+        <p>Ma cagnotte</p>
       </div>
       <% end %>
 
-    <div class="card-dashboard">
+    <%= link_to dashboard_health_path, class: 'card-dashboard text-decoration-none' do %>
       <div class="icon-bg">
       <span class="iconify" data-icon="ph:heart-thin"></span>
       </div>
-      <p><%= link_to "Suivi santé", dashboard_health_path, class: "text-decoration-none"%></p>
-    </div>
+      <p>Suivi santé</p>
+    <% end %>
 
-    <div class="card-dashboard">
+    <%= link_to dashboard_motivation_path, class: 'card-dashboard text-decoration-none' do %>
       <div class="icon-bg">
         <span class="iconify" id="muscle" data-icon="emojione-monotone:flexed-biceps"></span>
       </div>
-      <p><%= link_to "Motivation", dashboard_motivation_path, class: "text-decoration-none"%></p>
-    </div>
+      <p class="text-decoration-none">Motivation</p>
+    <% end %>
 
-    <div class="card-dashboard">
+    <%= link_to new_transaction_path, class: 'card-dashboard text-decoration-none' do %>
       <div class="icon-bg">
         <span class="iconify" data-icon="iwwa:consumption-o"></span>
       </div>
-      <p><%= link_to "Renseigner ma conso", new_transaction_path, class: "text-decoration-none"%></p>
-    </div>
-
+      <p>Renseigner ma conso</p>
+    <% end %>
   </div>
