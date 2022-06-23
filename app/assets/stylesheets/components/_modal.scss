@@ -51,3 +51,30 @@
   animation-duration: 0.4s;
   backdrop-filter: blur(2px);
 }
+
+.modal-body {
+  h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+.modal-header {
+  h5 {
+    text-align: center;
+    color: $custom-green-button;
+    padding-left: 130px;
+    font-size: 25px;
+  }
+  .iconify {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+  width: 80%;
+  margin: 0 auto;
+}
