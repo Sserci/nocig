@@ -56,12 +56,98 @@
       </div>
       <% end %>
 
-    <%= link_to dashboard_health_path, class: 'card-dashboard text-decoration-none' do %>
-      <div class="icon-bg">
-      <span class="iconify" data-icon="ph:heart-thin"></span>
-      </div>
-      <p>Suivi santé</p>
+    <% if current_user.usage_days >= 3650 %>
+      <%= link_to dashboard_health_path(anchor: "10ans"), class: 'card-dashboard text-decoration-none' do %>
+        <div class="icon-bg">
+        <span class="iconify" data-icon="ph:heart-thin"></span>
+        </div>
+        <p>Suivi santé</p>
+      <% end %>
+
+    <% elsif 1825 <= current_user.usage_days %>
+      <%= link_to dashboard_health_path(anchor: "5ans"), class: 'card-dashboard text-decoration-none' do %>
+        <div class="icon-bg">
+        <span class="iconify" data-icon="ph:heart-thin"></span>
+        </div>
+        <p>Suivi santé</p>
+      <% end %>
+
+    <% elsif 365 <= current_user.usage_days %>
+      <%= link_to dashboard_health_path(anchor: "1an"), class: 'card-dashboard text-decoration-none' do %>
+        <div class="icon-bg">
+        <span class="iconify" data-icon="ph:heart-thin"></span>
+        </div>
+        <p>Suivi santé</p>
+      <% end %>
+
+    <% elsif 90 <= current_user.usage_days %>
+      <%= link_to dashboard_health_path(anchor: "90jours"), class: 'card-dashboard text-decoration-none' do %>
+        <div class="icon-bg">
+        <span class="iconify" data-icon="ph:heart-thin"></span>
+        </div>
+        <p>Suivi santé</p>
+      <% end %>
+
+    <% elsif 60 <= current_user.usage_days %>
+      <%= link_to dashboard_health_path(anchor: "60jours"), class: 'card-dashboard text-decoration-none' do %>
+        <div class="icon-bg">
+        <span class="iconify" data-icon="ph:heart-thin"></span>
+        </div>
+        <p>Suivi santé</p>
+      <% end %>
+
+    <% elsif 30 <= current_user.usage_days %>
+      <%= link_to dashboard_health_path(anchor: "30jours"), class: 'card-dashboard text-decoration-none' do %>
+        <div class="icon-bg">
+        <span class="iconify" data-icon="ph:heart-thin"></span>
+        </div>
+        <p>Suivi santé</p>
+      <% end %>
+
+    <% elsif 14 <= current_user.usage_days %>
+      <%= link_to dashboard_health_path(anchor: "14jours"), class: 'card-dashboard text-decoration-none' do %>
+        <div class="icon-bg">
+        <span class="iconify" data-icon="ph:heart-thin"></span>
+        </div>
+        <p>Suivi santé</p>
+      <% end %>
+
+    <% elsif 7 <= current_user.usage_days %>
+      <%= link_to dashboard_health_path(anchor: "7jours"), class: 'card-dashboard text-decoration-none' do %>
+        <div class="icon-bg">
+        <span class="iconify" data-icon="ph:heart-thin"></span>
+        </div>
+        <p>Suivi santé</p>
+      <% end %>
+
+    <% elsif 3 <= current_user.usage_days %>
+      <%= link_to dashboard_health_path(anchor: "3jours"), class: 'card-dashboard text-decoration-none' do %>
+        <div class="icon-bg">
+        <span class="iconify" data-icon="ph:heart-thin"></span>
+        </div>
+        <p>Suivi santé</p>
+      <% end %>
+
+    <% elsif 2 <= current_user.usage_days %>
+      <%= link_to dashboard_health_path(anchor: "2jours"), class: 'card-dashboard text-decoration-none' do %>
+        <div class="icon-bg">
+        <span class="iconify" data-icon="ph:heart-thin"></span>
+        </div>
+        <p>Suivi santé</p>
+      <% end %>
+
+    <% elsif current_user.usage_days < 2  %>
+      <%= link_to dashboard_health_path(anchor: "1jour"), class: 'card-dashboard text-decoration-none' do %>
+        <div class="icon-bg">
+        <span class="iconify" data-icon="ph:heart-thin"></span>
+        </div>
+        <p>Suivi santé</p>
+      <% end %>
+
     <% end %>
+
+
+
 
     <%= link_to dashboard_motivation_path, class: 'card-dashboard text-decoration-none' do %>
       <div class="icon-bg">
