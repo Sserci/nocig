@@ -23,11 +23,11 @@
           <%= form_with url: profile_bank_path, method: :patch do |f| %>
             <%= f.label :query, "Nom de votre banque:" %>
           <div class="form-with-control-empty">
-            <%= f.text_field :bank_name %>
+            <%= f.text_field :bank_name, value: "Caisse d'Epargne" %>
           </div>
             <%= f.label :query, "Votre IBAN:" %>
           <div class="form-with-control-empty">
-            <%= f.text_field :iban, required: 'required', class: "iban-form"%>
+            <%= f.text_field :iban, required: 'required', class: "iban-form",  value: "FR1420041010050500013M02606"%>
           </div>
 
         <br>
