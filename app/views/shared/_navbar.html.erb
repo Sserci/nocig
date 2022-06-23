@@ -10,14 +10,118 @@
   </div>
   <% end %>
 
-  <%= link_to dashboard_health_path do %>
-  <div class="menu">
-    <span class="iconify
-    <%= 'active' if current_page?(dashboard_health_path) %>"
-    data-icon="ant-design:heart-filled"></span>
-    <p>Santé</p>
-  </div>
+  <% if current_user.usage_days >= 3650 %>
+    <%= link_to dashboard_health_path(anchor: "10ans") do %>
+      <div class="menu">
+        <span class="iconify
+        <%= 'active' if current_page?(dashboard_health_path) %>"
+        data-icon="ant-design:heart-filled"></span>
+        <p>Santé</p>
+      </div>
+    <% end %>
+
+  <% elsif 1825 <= current_user.usage_days %>
+    <%= link_to dashboard_health_path(anchor: "5ans") do %>
+      <div class="menu">
+        <span class="iconify
+        <%= 'active' if current_page?(dashboard_health_path) %>"
+        data-icon="ant-design:heart-filled"></span>
+        <p>Santé</p>
+      </div>
+    <% end %>
+
+  <% elsif 365 <= current_user.usage_days %>
+    <%= link_to dashboard_health_path(anchor: "1an") do %>
+      <div class="menu">
+        <span class="iconify
+        <%= 'active' if current_page?(dashboard_health_path) %>"
+        data-icon="ant-design:heart-filled"></span>
+        <p>Santé</p>
+      </div>
+    <% end %>
+
+  <% elsif 90 <= current_user.usage_days %>
+    <%= link_to dashboard_health_path(anchor: "90jours") do %>
+      <div class="menu">
+        <span class="iconify
+        <%= 'active' if current_page?(dashboard_health_path) %>"
+        data-icon="ant-design:heart-filled"></span>
+        <p>Santé</p>
+      </div>
+    <% end %>
+
+  <% elsif 60 <= current_user.usage_days %>
+    <%= link_to dashboard_health_path(anchor: "60jours") do %>
+      <div class="menu">
+        <span class="iconify
+        <%= 'active' if current_page?(dashboard_health_path) %>"
+        data-icon="ant-design:heart-filled"></span>
+        <p>Santé</p>
+      </div>
+    <% end %>
+
+  <% elsif 30 <= current_user.usage_days %>
+    <%= link_to dashboard_health_path(anchor: "30jours") do %>
+      <div class="menu">
+        <span class="iconify
+        <%= 'active' if current_page?(dashboard_health_path) %>"
+        data-icon="ant-design:heart-filled"></span>
+        <p>Santé</p>
+      </div>
+    <% end %>
+
+  <% elsif 14 <= current_user.usage_days %>
+    <%= link_to dashboard_health_path(anchor: "14jours") do %>
+      <div class="menu">
+        <span class="iconify
+        <%= 'active' if current_page?(dashboard_health_path) %>"
+        data-icon="ant-design:heart-filled"></span>
+        <p>Santé</p>
+      </div>
+    <% end %>
+
+  <% elsif 7 <= current_user.usage_days %>
+    <%= link_to dashboard_health_path(anchor: "7jours") do %>
+      <div class="menu">
+        <span class="iconify
+        <%= 'active' if current_page?(dashboard_health_path) %>"
+        data-icon="ant-design:heart-filled"></span>
+        <p>Santé</p>
+      </div>
+    <% end %>
+
+  <% elsif 3 <= current_user.usage_days %>
+    <%= link_to dashboard_health_path(anchor: "3jours") do %>
+      <div class="menu">
+        <span class="iconify
+        <%= 'active' if current_page?(dashboard_health_path) %>"
+        data-icon="ant-design:heart-filled"></span>
+        <p>Santé</p>
+      </div>
+    <% end %>
+
+  <% elsif 2 <= current_user.usage_days %>
+    <%= link_to dashboard_health_path(anchor: "2jours") do %>
+      <div class="menu">
+        <span class="iconify
+        <%= 'active' if current_page?(dashboard_health_path) %>"
+        data-icon="ant-design:heart-filled"></span>
+        <p>Santé</p>
+      </div>
+    <% end %>
+
+  <% elsif current_user.usage_days < 2  %>
+    <%= link_to dashboard_health_path(anchor: "1jour") do %>
+      <div class="menu">
+        <span class="iconify
+        <%= 'active' if current_page?(dashboard_health_path) %>"
+        data-icon="ant-design:heart-filled"></span>
+        <p>Santé</p>
+      </div>
+    <% end %>
+
   <% end %>
+
 
   <%= link_to dashboard_pot_path do %>
   <div class="menu">
@@ -40,7 +144,7 @@
   <%= link_to profile_home_path do %>
     <div class="menu">
       <span class="iconify
-      <%= 'active' if (current_page?(profile_home_path)) && (current_page?(recover_my_pot_path))  %>"
+      <%= 'active' if (current_page?(profile_home_path))%>"
       data-icon="carbon:user-avatar"></span>
       <p>Profil</p>
     </div>
