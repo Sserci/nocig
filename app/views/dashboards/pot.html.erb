@@ -25,7 +25,7 @@
     <h1>Ma Cagnotte</h1>
 
     <div id="pie-chart">
-      <%= pie_chart({"acquis"=>current_user.pot, "montant restant"=>current_user.objective_amount}, colors: ["#FFDCF7", "#06C4BE"])%>
+      <%= pie_chart({"acquis"=>current_user.pot, "montant restant"=>current_user.objective_amount - current_user.pot}, colors: ["#FFDCF7", "#06C4BE"])%>
     </div>
 
     <div>
